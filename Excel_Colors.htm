@@ -1,0 +1,2286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<title>Color Palette and the 56 Excel ColorIndex Colors</title>
+<meta name="description" content="Excel Color Index, coloring of
+fonts, cell interiors">
+
+<meta name="author" content="David McRitchie">
+<meta name="keywords" content="background, color, colorindex, colors, colour, colours, palette">
+<meta name="robots" content="index,nofollow">
+
+<style type="text/css">
+TD        {font-family:arial; font-size: 10pt}
+ .yellow {background-color: #ffff00;}
+ .cyan   {background-color: #00FFFF;}
+ .bookmarklet {background-color: #E0E0E0; Color: #0000FF;  border: solid; border-width: thin; border-Color: #0000FF; font-size: smaller; }
+ .gray {color: #B0B0FF; } 
+ a.bml { border:1px outset #ddd; padding: 1px; vertical-align: 1px; } 
+ a.bml { background: #ddd; text-decoration: none;  font-family: sans-serif; font-size: 80%; font-weight: bold; color: darkgreen; } 
+ a.bol { border:1px outset #ddd; padding: 1px; vertical-align: 1px; }
+ a.bol { background: #d8dfff; text-decoration: none;  font-family: sans-serif; font-size: 80%; color: darkgreen; }    
+</style>
+</head>
+
+<body text="#000000" bgcolor="#dcFFdc">
+<!--  === BGCOLOR="#dcFFdc" text="#000000" LINK="#0033FF" VLINK="#990099" ALINK="#CC0000"-->
+<!-- background color preferred for 32768 colors is E8FFE8-->
+<!-- downgraded to DCFFDC which is seen as CCFFCC with 256 colors-->
+
+<table style="border-style: dashed; border-color: red; opacity: 0.5;" align="right" bgcolor="#ffffff">
+<tbody><tr><td>Use a <a href="http://dmcritchie.mvps.org/ie/bookmarklets.htm#where">bookmarklet</a> &nbsp;&nbsp;
+[<a href="http://www.bookmarklets.com/tools/frames.phtml#pgcolorfrm" title="from bookmarklets.com">ref</a>]&nbsp;
+[<a href="http://www.squarefree.com/bookmarklets/color.html" title="from squarefree.com allow 30 seconds">ref</a>]
+<br>to Change page background color
+<br>type in  white, #eeeeee, or use<br>spacebar for your default color
+<br><b><a href="javascript:Cys8Np=prompt('Background%20color...','');Fj9z4M=new%20Function('x','i','if(Cys8Np){if(x.length==0){if(document.all)x.document.body.background=\'\';void(x.document.bgColor=Cys8Np)}else{for(i=0;i<x.length;i++){Fj9z4M(x.frames[i])}}}');Fj9z4M(this)"><nobr><font size="+1" color="#0000ff">Page Color...</font></nobr></a> (Frames&nbsp;Version)</b>
+</td></tr></tbody></table>
+
+<h1>Color Palette and the 56 Excel ColorIndex Colors</h1>
+<div style="margin-left:12%;">
+Location: &nbsp;&nbsp;<a href="http://www.mvps.org/dmcritchie/excel/colors.htm">http://www.mvps.org/dmcritchie/excel/colors.htm</a><br>
+Home page: <a href="http://dmcritchie.mvps.org/excel/excel.htm">http://www.mvps.org/dmcritchie/excel/excel.htm</a>
+<br><font color="#808080">Keywords:&nbsp; color, colorindex, colors, colour, colours, palette</font>
+</div>
+<br>&nbsp;
+<center>
+<a name="No_Frames" href="#No_Frames" target="_top">[View without Frames]</a>
+<br>&nbsp;<br>Excel Color Index, coloring of fonts, cell interiors<br>
+<b>[<a href="#palette">palette</a>]</b>, 
+[<a href="#copy">copy</a>], 
+<b>[<a href="#chart">chart</a>]</b>, 
+<b>[<a href="#colorindex">colorindex</a>]</b>, 
+[<a href="#grayscale">grayscale</a>], 
+[<a href="#formatting">formatting</a>], 
+[<a href="#DOS">DOS/OE</a>], 
+[<a href="#HTML">HTML</a>]*, 
+[<a href="#Help">Help</a>], 
+[<a href="#Macros">Macros</a>], 
+[<a href="#macros">macros</a>], 
+[<a href="#ColorFormulas">ColorFormulas</a>], 
+[<a href="#FormatUnprotected">FormatUnprotected</a>], 
+[<a href="#chgfont">chgfont</a>], 
+[<a href="#ClearConstantsfromColorCells">ClearConstantsf</a>], 
+[<a href="#icolorF">icolorF</a>], 
+[<a href="#popvalue">popvalue</a>], 
+[<a href="#popbased">popbased</a>], 
+[<a href="#sorting">sorting</a>], 
+[<a href="#count">count</a>], 
+[<a href="#rowcolor">rowcolor</a>], 
+[<a href="#DelRows">DelRows</a>], 
+[<a href="#hexconv">hexconv</a>], 
+[<a href="#chgpalette">chgpalette</a>], 
+[<a href="#fillcolor">fillcolor</a>], 
+<b>[<a href="#cellcommentcolor">cellcommentcolor</a>]</b>, 
+[<a href="#BackupDisplay">BackupDisplay</a>],&nbsp; 
+<b>[<a href="#tabs">tabs</a>]</b>,&nbsp; 
+<b>[<a href="#triangles">triangles</a>]</b>, 
+[<a href="#manual">manual</a>], 
+[<a href="#colorcharts">colorcharts</a>], 
+[<a href="#detector">detector</a>], 
+[<a href="#Luma">Luma</a>], 
+[<a href="#pgms">pgms</a>], 
+[<a href="#colorcoding">colorcoding</a>], 
+[<a href="#coloringcode">coloringcode</a>], 
+[<a href="#VBE">VBE</a>], 
+<b>[<a href="#Related">Related</a>]</b>, 
+[<a href="#thissite">thissite</a>], 
+[<a href="#postings">postings</a>], 
+[<a href="#otherxl">otherxl</a>], 
+[<a href="#other">other</a>], 
+[<a href="#font">font</a>], 
+[<a href="#problems">problems</a>], 
+[<a href="#printers">printers</a>], 
+[<a href="#mskb">mskb</a>], 
+[<a href="#msdn">msdn</a>], 
+</center>
+<br>&nbsp;
+<table align="center" border="3" cellpadding="10"><tbody><tr bgcolor="#FFFF90"><td>
+This page contains some VBA macros and User Defined Functions.&nbsp; If you need assistance  to installing either<br>please refer to <a href="http://dmcritchie.mvps.org/excel/formula.htm#install">Install a Macro or User Defined Function</a>&nbsp; on my Formula page.</td></tr></tbody></table>
+<p>
+<b>Scope of the Color Palette:</b> Each workbook has it&#8217;s own palette.&nbsp; To change the default,
+change your book.xlt <a href="http://dmcritchie.mvps.org/excel/template.htm">template</a> for new workbooks.
+</p><h2 id="palette">How the color palette works (#palette)</h2>
+The arrangement in XL97 differs from previous releases in that the 
+colors are arranged from darker to lighter colors, but the Color Index 
+values remain the same.
+<p>
+From HELP --&gt; Index --&gt; palette
+</p><blockquote><font size="-1">
+Each Microsoft Excel workbook has a palette of 56 colors that you
+can apply to cells, fonts, <a href="http://dmcritchie.mvps.org/excel/gridline.htm">gridlines</a>, graphic objects, and fills and
+lines in a chart.&nbsp; If you are using a color monitor, you can
+customize the shade and intensity of the colors in the color palette
+for each workbook.</font>
+<p>When you change a color in the palette, it is
+changed for any element formatted with the color you changed,
+throughout the entire workbook.&nbsp; To use the same custom color
+scheme in a set of workbooks, you can copy the color palette from
+one workbook to another.&nbsp; For example, you can create a custom
+color palette that matches your company&#8217;s logo and image and then
+copy it into &nbsp; the workbooks used in company presentations.&nbsp;
+You can also replace the default color palette that Microsoft Excel
+uses when it creates a new workbook.
+</p></blockquote>
+<h3 id="copy">Copy color palettes between workbooks (#copy)</h3>
+<blockquote>
+HELP --&gt; Wizard --&gt; copy palette
+<br>1   Open the workbook that contains the color palette you want to copy.
+<br>2   Switch to the workbook to which you want to copy the color palette.
+<br>3   On the Tools menu, click Options, and then click the Color tab.
+<br>4   In the Copy Colors From box, click the workbook that contains the color palette you want to copy.
+<p>
+<b>Note:</b> I have not had any desire to change my own colors so expect
+ them to be unchanged.&nbsp;  Correct interpretation of the 56 colors in
+ the ColorIndex is dependent upon the HTML wizard conversion on 
+ColorIndex numbers.&nbsp; The RGB values definitely match color 
+swatches.
+</p><p>The names for
+colors appears to have a wide variance; I am trying to find what Microsoft generally calls them if they are not named in Excel.
+
+</p><p><font size="-2">The following colors has been used in Microsoft KB documentation probably for the first 16 colors:<br>
+Black,
+Blue,
+Cyan,
+Green,
+Magenta,
+Red,
+Yellow,
+White,
+Dk Blue,
+Dk Cyan,
+Dk Green,
+Dk Magenta,
+Dk Red,
+Dk Yellow,
+Dk Gray,
+Lt Gray
+</font>
+</p><hr>
+<font size="-2"><center>More confusion found in MS KB documentation</center>
+0 - Black,      1 - Blue,       2 - Green,      3 - Cyan,       4 - Red,
+        5 - Magenta,    6 - Yellow/Brown,       7 - White,
+8 - Gray,
+<br>
+9 - Bright Blue,        A - Bright Green,       B - Bright Cyan,        C
+ - Bright Red, D - Bright Magenta,     E - Bright Yellow,      F - 
+Bright White
+</font>
+<hr>
+<p>
+I have had to change some colors to match Microsoft usage from what
+I thought was normal usage.&nbsp;  Assignment of name Gray may have
+to be changed.&nbsp; Color6 and Color27 appear to both be Yellow on
+my system even after resetting colors (Tools --&gt; Options).
+</p></blockquote>
+<h2 id="chart">Color Palette, Excel &nbsp; (#chart)</h2>
+<blockquote>
+To see your 56 colors   (to bring up box in <a href="#paletteBox">VBA</a>)
+In XL95 Help --&gt; index --&gt; Colorindex property<br>
+In XL97/XL2000 VBE HELP (Alt+F11, F1) --&gt; index --&gt; ColorIndex property
+<p>It would be hard to compare the palettes between XL95 and XL97.&nbsp; The XL95
+palette is arranged by index number and the XL97 palette is arranged chromatically.
+</p><p><b>to see the palette in Excel</b>
+<br>40 color palette is on a toolbar icon
+<br>56 color palette is available with Format, Cells, Patterns(tab)
+</p><p><b>in VBA</b>
+<br> &nbsp;  Application.CommandBars("Fill Color").Visible = True &nbsp;  ' -- 40 colors
+<br> &nbsp;  Application.Dialogs.Item(xlDialogColorPalette).Show  &nbsp; &nbsp;  ' -- 56 colors
+</p><p>
+This table was NOT generated by the Internet Assistant Wizard for 
+Microsoft Excel.&nbsp; You can find this add-in on 
+"http://www.microsoft.com/msoffice/freestuf/msexcel/index.htm" --&gt;
+</p><p>Appearance of table redone 2000-12-09 in Excel 2000, I display 32,760 colors,
+Excel shows only 56 colors at any time.&nbsp; Following are the defaults.
+</p><p> 
+Text within some cells can be viewed easier by selecting an area with
+the mouse.&nbsp;
+
+<nobr>
+<a class="bml" style="" href="javascript:(function(){var%20newSS,%20styles='*%20{%20background:%20white%20!%20important;%20color:%20black%20!important%20}%20:link,%20:link%20*%20{%20color:%20#0000EE%20!important%20}%20:visited,%20:visited%20*%20{%20color:%20#551A8B%20!important%20}';%20if(document.createStyleSheet)%20{%20document.createStyleSheet(&quot;javascript:'&quot;+styles+&quot;'&quot;);%20}%20else%20{%20newSS=document.createElement('link');%20newSS.rel='stylesheet';%20newSS.href='data:text/css,'+escape(styles);%20document.getElementsByTagName(&quot;head&quot;)[0].appendChild(newSS);}})();">zap colors</a> &nbsp;
+
+<a class="bml" id="reset_reload" href="javascript:void(window.location.reload(true))">Reset&nbsp;(F5)</a>&nbsp;
+</nobr>&nbsp;  
+
+
+<!-- ======================================= -->
+<!--font face="courier new"-->
+</p><table bgcolor="#FFFFFF" border="1" cellpadding="3" cellspacing="0">
+<tbody><tr><td>interior</td><td>font</td>
+<td><b><i><a href="#hexconvxl">HTML</a></i></b></td><td><i>bgcolor=</i></td>
+<td align="right"><b><a href="#hexconv"><font color="red"><i>Red</i></font></a></b>&lt;</td><td align="right"><b><font color="#008000">Green</font></b></td>
+<td align="right"><b><font color="blue">Blue</font></b></td><td><b>Color</b></td></tr>
+<tr><td bgcolor="#000000"><font color="#FFFFFF">Black</font></td><td>[Color 1]</td>
+<td>#000000</td><td bgcolor="#000000"><font color="#FFFFFF">#000000</font></td>
+<td align="right">0</td><td align="right">0</td><td align="right">0</td>
+<td><b>[Black]</b></td></tr>
+<tr><td>White</td><td><font color="#FFFFFF">[Color 2]</font></td>
+<td>#FFFFFF</td><td bgcolor="#FFFFFF">#FFFFFF</td>
+<td align="right">255</td><td align="right">255</td><td align="right">255</td>
+<td><b>[White]</b></td></tr>
+<tr><td bgcolor="#FF0000">Red</td>
+<td><font color="#FF0000">[Color 3]</font></td>
+<td>#FF0000</td><td bgcolor="#FF0000">#FF0000</td>
+<td align="right">255</td><td align="right">0</td><td align="right">0</td>
+<td><b>[Red]</b></td></tr>
+<tr><td bgcolor="#00FF00">Green</td>
+<td><font color="#00FF00">[Color 4]</font></td>
+<td>#00FF00</td><td bgcolor="#00FF00">#00FF00</td>
+<td align="right">0</td><td align="right">255</td><td align="right">0</td>
+<td><b>[Green]</b></td></tr>
+<tr><td bgcolor="#0000FF">Blue</td>
+<td><font color="#0000FF">[Color 5]</font></td>
+<td>#0000FF</td><td bgcolor="#0000FF">#0000FF</td>
+<td align="right">0</td><td align="right">0</td><td align="right">255</td>
+<td><b>[Blue]</b></td></tr>
+<tr><td bgcolor="#FFFF00">Yellow</td>
+<td><font color="#FFFF00">[Color 6]</font></td>
+<td>#FFFF00</td><td bgcolor="#FFFF00">#FFFF00</td>
+<td align="right">255</td><td align="right">255</td><td align="right">0</td>
+<td><b>[Yellow]</b></td></tr>
+<tr><td bgcolor="#FF00FF">Magenta</td>
+<td><font color="#FF00FF">[Color 7]</font></td>
+<td>#FF00FF</td><td bgcolor="#FF00FF">#FF00FF</td>
+<td align="right">255</td><td align="right">0</td><td align="right">255</td>
+<td><b>[Magenta]</b></td></tr>
+<tr><td bgcolor="#00FFFF">Cyan</td>
+<td><font color="#00FFFF">[Color 8]</font></td>
+<td>#00FFFF</td><td bgcolor="#00FFFF">#00FFFF</td>
+<td align="right">0</td><td align="right">255</td><td align="right">255</td>
+<td><b>[Cyan]</b></td></tr>
+<tr><td bgcolor="#800000">[Color 9]</td>
+<td><font color="#800000">[Color 9]</font></td>
+<td>#800000</td><td bgcolor="#800000">#800000</td>
+<td align="right">128</td><td align="right">0</td><td align="right">0</td>
+<td>[Color 9]</td></tr>
+<tr><td bgcolor="#008000">[Color 10]</td>
+<td><font color="#008000">[Color 10]</font></td>
+<td>#008000</td><td bgcolor="#008000">#008000</td>
+<td align="right">0</td><td align="right">128</td><td align="right">0</td>
+<td>[Color 10]</td></tr>
+<tr><td bgcolor="#000080">[Color 11]</td>
+<td><font color="#000080">[Color 11]</font></td>
+<td>#000080</td><td bgcolor="#000080">#000080</td>
+<td align="right">0</td><td align="right">0</td><td align="right">128</td>
+<td>[Color 11]</td></tr>
+<tr><td bgcolor="#808000">[Color 12]</td>
+<td><font color="#808000">[Color 12]</font></td>
+<td>#808000</td><td bgcolor="#808000">#808000</td>
+<td align="right">128</td><td align="right">128</td><td align="right">0</td>
+<td>[Color 12]</td></tr>
+<tr><td bgcolor="#800080">[Color 13]</td>
+<td><font color="#800080">[Color 13]</font></td>
+<td>#800080</td><td bgcolor="#800080">#800080</td>
+<td align="right">128</td><td align="right">0</td><td align="right">128</td>
+<td>[Color 13]</td></tr>
+<tr><td bgcolor="#008080">[Color 14]</td>
+<td><font color="#008080">[Color 14]</font></td>
+<td>#008080</td><td bgcolor="#008080">#008080</td>
+<td align="right">0</td><td align="right">128</td><td align="right">128</td>
+<td>[Color 14]</td></tr>
+<tr><td bgcolor="#C0C0C0">[Color 15]</td>
+<td><font color="#C0C0C0">[Color 15]</font></td>
+<td>#C0C0C0</td><td bgcolor="#C0C0C0">#C0C0C0</td>
+<td align="right">192</td><td align="right">192</td><td align="right">192</td>
+<td>[Color 15]</td></tr>
+<tr><td bgcolor="#808080">[Color 16]</td>
+<td><font color="#808080">[Color 16]</font></td>
+<td>#808080</td><td bgcolor="#808080">#808080</td>
+<td align="right">128</td><td align="right">128</td><td align="right">128</td>
+<td>[Color 16]</td></tr>
+<tr><td bgcolor="#9999FF">[Color 17]</td>
+<td><font color="#9999FF">[Color 17]</font></td>
+<td>#9999FF</td><td bgcolor="#9999FF">#9999FF</td>
+<td align="right">153</td><td align="right">153</td><td align="right">255</td>
+<td>[Color 17]</td></tr>
+<tr><td bgcolor="#993366">[Color 18]</td>
+<td><font color="#993366">[Color 18]</font></td>
+<td>#993366</td><td bgcolor="#993366">#993366</td>
+<td align="right">153</td><td align="right">51</td><td align="right">102</td>
+<td>[Color 18]</td></tr>
+<tr><td bgcolor="#FFFFCC">[Color 19]</td>
+<td><font color="#FFFFCC">[Color 19]</font></td>
+<td>#FFFFCC</td><td bgcolor="#FFFFCC">#FFFFCC</td>
+<td align="right">255</td><td align="right">255</td><td align="right">204</td>
+<td>[Color 19]</td></tr>
+<tr><td bgcolor="#CCFFFF">[Color 20]</td>
+<td><font color="#CCFFFF">[Color 20]</font></td>
+<td>#CCFFFF</td><td bgcolor="#CCFFFF">#CCFFFF</td>
+<td align="right">204</td><td align="right">255</td><td align="right">255</td>
+<td>[Color 20]</td></tr>
+<tr><td bgcolor="#660066">[Color 21]</td>
+<td><font color="#660066">[Color 21]</font></td>
+<td>#660066</td><td bgcolor="#660066">#660066</td>
+<td align="right">102</td><td align="right">0</td><td align="right">102</td>
+<td>[Color 21]</td></tr>
+<tr><td bgcolor="#FF8080">[Color 22]</td>
+<td><font color="#FF8080">[Color 22]</font></td>
+<td>#FF8080</td><td bgcolor="#FF8080">#FF8080</td>
+<td align="right">255</td><td align="right">128</td><td align="right">128</td>
+<td>[Color 22]</td></tr>
+<tr><td bgcolor="#0066CC">[Color 23]</td>
+<td><font color="#0066CC">[Color 23]</font></td>
+<td>#0066CC</td><td bgcolor="#0066CC">#0066CC</td>
+<td align="right">0</td><td align="right">102</td><td align="right">204</td>
+<td>[Color 23]</td></tr>
+<tr><td bgcolor="#CCCCFF">[Color 24]</td>
+<td><font color="#CCCCFF">[Color 24]</font></td>
+<td>#CCCCFF</td><td bgcolor="#CCCCFF">#CCCCFF</td>
+<td align="right">204</td><td align="right">204</td><td align="right">255</td>
+<td>[Color 24]</td></tr>
+<tr><td bgcolor="#000080">[Color 25]</td>
+<td><font color="#000080">[Color 25]</font></td>
+<td>#000080</td><td bgcolor="#000080">#000080</td>
+<td align="right">0</td><td align="right">0</td><td align="right">128</td>
+<td>[Color 25]</td></tr>
+<tr><td bgcolor="#FF00FF">[Color 26]</td>
+<td><font color="#FF00FF">[Color 26]</font></td>
+<td>#FF00FF</td><td bgcolor="#FF00FF">#FF00FF</td>
+<td align="right">255</td><td align="right">0</td><td align="right">255</td>
+<td>[Color 26]</td></tr>
+<tr><td bgcolor="#FFFF00">[Color 27]</td>
+<td><font color="#FFFF00">[Color 27]</font></td>
+<td>#FFFF00</td><td bgcolor="#FFFF00">#FFFF00</td>
+<td align="right">255</td><td align="right">255</td><td align="right">0</td>
+<td>[Color 27]</td></tr>
+<tr><td bgcolor="#00FFFF">[Color 28]</td>
+<td><font color="#00FFFF">[Color 28]</font></td>
+<td>#00FFFF</td><td bgcolor="#00FFFF">#00FFFF</td>
+<td align="right">0</td><td align="right">255</td><td align="right">255</td>
+<td>[Color 28]</td></tr>
+<tr><td bgcolor="#800080">[Color 29]</td>
+<td><font color="#800080">[Color 29]</font></td>
+<td>#800080</td><td bgcolor="#800080">#800080</td>
+<td align="right">128</td><td align="right">0</td><td align="right">128</td>
+<td>[Color 29]</td></tr>
+<tr><td bgcolor="#800000">[Color 30]</td>
+<td><font color="#800000">[Color 30]</font></td>
+<td>#800000</td><td bgcolor="#800000">#800000</td>
+<td align="right">128</td><td align="right">0</td><td align="right">0</td>
+<td>[Color 30]</td></tr>
+<tr><td bgcolor="#008080">[Color 31]</td>
+<td><font color="#008080">[Color 31]</font></td>
+<td>#008080</td><td bgcolor="#008080">#008080</td>
+<td align="right">0</td><td align="right">128</td><td align="right">128</td>
+<td>[Color 31]</td></tr>
+<tr><td bgcolor="#0000FF">[Color 32]</td>
+<td><font color="#0000FF">[Color 32]</font></td>
+<td>#0000FF</td><td bgcolor="#0000FF">#0000FF</td>
+<td align="right">0</td><td align="right">0</td><td align="right">255</td>
+<td>[Color 32]</td></tr>
+<tr><td bgcolor="#00CCFF">[Color 33]</td>
+<td><font color="#00CCFF">[Color 33]</font></td>
+<td>#00CCFF</td><td bgcolor="#00CCFF">#00CCFF</td>
+<td align="right">0</td><td align="right">204</td><td align="right">255</td>
+<td>[Color 33]</td></tr>
+<tr><td bgcolor="#CCFFFF">[Color 34]</td>
+<td><font color="#CCFFFF">[Color 34]</font></td>
+<td>#CCFFFF</td><td bgcolor="#CCFFFF">#CCFFFF</td>
+<td align="right">204</td><td align="right">255</td><td align="right">255</td>
+<td>[Color 34]</td></tr>
+<tr><td bgcolor="#CCFFCC">[Color 35]</td>
+<td><font color="#CCFFCC">[Color 35]</font></td>
+<td>#CCFFCC</td><td bgcolor="#CCFFCC">#CCFFCC</td>
+<td align="right">204</td><td align="right">255</td><td align="right">204</td>
+<td>[Color 35]</td></tr>
+<tr><td bgcolor="#FFFF99">[Color 36]</td>
+<td><font color="#FFFF99">[Color 36]</font></td>
+<td>#FFFF99</td><td bgcolor="#FFFF99">#FFFF99</td>
+<td align="right">255</td><td align="right">255</td><td align="right">153</td>
+<td>[Color 36]</td></tr>
+<tr><td bgcolor="#99CCFF">[Color 37]</td>
+<td><font color="#99CCFF">[Color 37]</font></td>
+<td>#99CCFF</td><td bgcolor="#99CCFF">#99CCFF</td>
+<td align="right">153</td><td align="right">204</td><td align="right">255</td>
+<td>[Color 37]</td></tr>
+<tr><td bgcolor="#FF99CC">[Color 38]</td>
+<td><font color="#FF99CC">[Color 38]</font></td>
+<td>#FF99CC</td><td bgcolor="#FF99CC">#FF99CC</td>
+<td align="right">255</td><td align="right">153</td><td align="right">204</td>
+<td>[Color 38]</td></tr>
+<tr><td bgcolor="#CC99FF">[Color 39]</td>
+<td><font color="#CC99FF">[Color 39]</font></td>
+<td>#CC99FF</td><td bgcolor="#CC99FF">#CC99FF</td>
+<td align="right">204</td><td align="right">153</td><td align="right">255</td>
+<td>[Color 39]</td></tr>
+<tr><td bgcolor="#FFCC99">[Color 40]</td>
+<td><font color="#FFCC99">[Color 40]</font></td>
+<td>#FFCC99</td><td bgcolor="#FFCC99">#FFCC99</td>
+<td align="right">255</td><td align="right">204</td><td align="right">153</td>
+<td>[Color 40]</td></tr>
+<tr><td bgcolor="#3366FF">[Color 41]</td>
+<td><font color="#3366FF">[Color 41]</font></td>
+<td>#3366FF</td><td bgcolor="#3366FF">#3366FF</td>
+<td align="right">51</td><td align="right">102</td><td align="right">255</td>
+<td>[Color 41]</td></tr>
+<tr><td bgcolor="#33CCCC">[Color 42]</td>
+<td><font color="#33CCCC">[Color 42]</font></td>
+<td>#33CCCC</td><td bgcolor="#33CCCC">#33CCCC</td>
+<td align="right">51</td><td align="right">204</td><td align="right">204</td>
+<td>[Color 42]</td></tr>
+<tr><td bgcolor="#99CC00">[Color 43]</td>
+<td><font color="#99CC00">[Color 43]</font></td>
+<td>#99CC00</td><td bgcolor="#99CC00">#99CC00</td>
+<td align="right">153</td><td align="right">204</td><td align="right">0</td>
+<td>[Color 43]</td></tr>
+<tr><td bgcolor="#FFCC00">[Color 44]</td>
+<td><font color="#FFCC00">[Color 44]</font></td>
+<td>#FFCC00</td><td bgcolor="#FFCC00">#FFCC00</td>
+<td align="right">255</td><td align="right">204</td><td align="right">0</td>
+<td>[Color 44]</td></tr>
+<tr><td bgcolor="#FF9900">[Color 45]</td>
+<td><font color="#FF9900">[Color 45]</font></td>
+<td>#FF9900</td><td bgcolor="#FF9900">#FF9900</td>
+<td align="right">255</td><td align="right">153</td><td align="right">0</td>
+<td>[Color 45]</td></tr>
+<tr><td bgcolor="#FF6600">[Color 46]</td>
+<td><font color="#FF6600">[Color 46]</font></td>
+<td>#FF6600</td><td bgcolor="#FF6600">#FF6600</td>
+<td align="right">255</td><td align="right">102</td><td align="right">0</td>
+<td>[Color 46]</td></tr>
+<tr><td bgcolor="#666699">[Color 47]</td>
+<td><font color="#666699">[Color 47]</font></td>
+<td>#666699</td><td bgcolor="#666699">#666699</td>
+<td align="right">102</td><td align="right">102</td><td align="right">153</td>
+<td>[Color 47]</td></tr>
+<tr><td bgcolor="#969696">[Color 48]</td>
+<td><font color="#969696">[Color 48]</font></td>
+<td>#969696</td><td bgcolor="#969696">#969696</td>
+<td align="right">150</td><td align="right">150</td><td align="right">150</td>
+<td>[Color 48]</td></tr>
+<tr><td bgcolor="#003366">[Color 49]</td>
+<td><font color="#003366">[Color 49]</font></td>
+<td>#003366</td><td bgcolor="#003366">#003366</td>
+<td align="right">0</td><td align="right">51</td><td align="right">102</td>
+<td>[Color 49]</td></tr>
+<tr><td bgcolor="#339966">[Color 50]</td>
+<td><font color="#339966">[Color 50]</font></td>
+<td>#339966</td><td bgcolor="#339966">#339966</td>
+<td align="right">51</td><td align="right">153</td><td align="right">102</td>
+<td>[Color 50]</td></tr>
+<tr><td bgcolor="#003300">[Color 51]</td>
+<td><font color="#003300">[Color 51]</font></td>
+<td>#003300</td><td bgcolor="#003300">#003300</td>
+<td align="right">0</td><td align="right">51</td><td align="right">0</td>
+<td>[Color 51]</td></tr>
+<tr><td bgcolor="#333300">[Color 52]</td>
+<td><font color="#333300">[Color 52]</font></td>
+<td>#333300</td><td bgcolor="#333300">#333300</td>
+<td align="right">51</td><td align="right">51</td><td align="right">0</td>
+<td>[Color 52]</td></tr>
+<tr><td bgcolor="#993300">[Color 53]</td>
+<td><font color="#993300">[Color 53]</font></td>
+<td>#993300</td><td bgcolor="#993300">#993300</td>
+<td align="right">153</td><td align="right">51</td><td align="right">0</td>
+<td>[Color 53]</td></tr>
+<tr><td bgcolor="#993366">[Color 54]</td>
+<td><font color="#993366">[Color 54]</font></td>
+<td>#993366</td><td bgcolor="#993366">#993366</td>
+<td align="right">153</td><td align="right">51</td><td align="right">102</td>
+<td>[Color 54]</td></tr>
+<tr><td bgcolor="#333399">[Color 55]</td>
+<td><font color="#333399">[Color 55]</font></td>
+<td>#333399</td><td bgcolor="#333399">#333399</td>
+<td align="right">51</td><td align="right">51</td><td align="right">153</td>
+<td>[Color 55]</td></tr>
+<tr><td bgcolor="#333333">[Color 56]</td>
+<td><font color="#333333">[Color 56]</font></td>
+<td>#333333</td><td bgcolor="#333333">#333333</td>
+<td align="right">51</td><td align="right">51</td><td align="right">51</td>
+<td>[Color 56]</td></tr>
+<tr><td colspan="8">
+Excel only recognizes names for Color 1 through 8 
+(Black, White, Red, Green, Blue, Yellow, Magenta, and Cyan).&nbsp; 
+The colors 1-16 are widely understood color names from the VGA color palette.&nbsp;
+Of the 56 colors only 40 colors appear on the palette.&nbsp; 
+The 40 colors names indicated on the Excel color palette 
+ (see <a href="#dpalette">below</a>) are for descriptive purposes only.&nbsp;
+</td>
+</tr>
+</tbody></table>
+<!--/font-->
+<p>
+The following color pairs are the same color<br>
+&nbsp; 11 &amp; 25,&nbsp; 5 &amp; 32,&nbsp; 14 &amp; 31,&nbsp; 8 &amp; 
+28,&nbsp; 9 &amp; 30, 13 &amp; 29,&nbsp; 18 &amp; 54, 20 &amp;34,&nbsp; 
+7 &amp; 26,&nbsp; and&nbsp;&nbsp; 6 &amp; 27.
+</p><p>
+The above table was created in Excel 2000 with help from the following
+macro, which includes Worksheet function HEX2DEC.&nbsp; The table was
+converted to HTML using <a href="http://dmcritchie.mvps.org/excel/xl2html.htm">XL2HTML</a> macro which
+(at least when done) does not convert embedded HTML code within a cell.
+
+</p><pre>Sub colors56()
+'57 colors, 0 to 56
+  Application.ScreenUpdating = False
+  Application.Calculation = xlCalculationManual   'pre XL97 xlManual
+Dim i As Long
+Dim str0 As String, str As String
+For i = 0 To 56
+  Cells(i + 1, 1).Interior.colorindex = i
+  Cells(i + 1, 1).Value = "[Color " &amp; i &amp; "]"
+  Cells(i + 1, 2).Font.colorindex = i
+  Cells(i + 1, 2).Value = "[Color " &amp; i &amp; "]"
+  str0 = Right("000000" &amp; Hex(Cells(i + 1, 1).Interior.color), 6)
+  'Excel shows nibbles in reverse order so make it as RGB
+  str = Right(str0, 2) &amp; Mid(str0, 3, 2) &amp; Left(str0, 2)
+  'generating 2 columns in the HTML table
+  Cells(i + 1, 3) = "#" &amp; str &amp; "#" &amp; str &amp; ""
+  Cells(i + 1, 4).Formula = "=Hex2dec(""" &amp; Right(str0, 2) &amp; """)"
+  Cells(i + 1, 5).Formula = "=Hex2dec(""" &amp; Mid(str0, 3, 2) &amp; """)"
+  Cells(i + 1, 6).Formula = "=Hex2dec(""" &amp; Left(str0, 2) &amp; """)"
+  Cells(i + 1, 7) = "[Color " &amp; i &amp; ")"
+Next i
+done:
+  Application.Calculation = xlCalculationAutomatic  'pre XL97 xlAutomatic
+  Application.ScreenUpdating = True
+End Sub
+</pre>
+<h3 id="colors56"><a name="colorindex">ColorIndex -- 56 Excel Colors [#colors56/#colorindex]</a></h3>
+<!-- ======================================= -->
+<table bgcolor="#FFFFFF" border="1" cellpadding="0" cellspacing="0">
+<tbody><tr><td>[Color 0]</td><td>[Color 0]</td><td>&nbsp;</td>
+<td bgcolor="#C0C0C0">[Color 15]</td>
+<td><font color="#C0C0C0">[Color 15]</font></td><td>&nbsp;</td>
+<td bgcolor="#800000">[Color 30]</td>
+<td><font color="#800000">[Color 30]</font></td><td>&nbsp;</td>
+<td bgcolor="#FF9900">[Color 45]</td>
+<td><font color="#FF9900">[Color 45]</font></td></tr>
+<tr><td bgcolor="#000000">[Color 1]</td><td>[Color 1]</td><td>&nbsp;</td>
+<td bgcolor="#808080">[Color 16]</td>
+<td><font color="#808080">[Color 16]</font></td><td>&nbsp;</td>
+<td bgcolor="#008080">[Color 31]</td>
+<td><font color="#008080">[Color 31]</font></td><td>&nbsp;</td>
+<td bgcolor="#FF6600">[Color 46]</td>
+<td><font color="#FF6600">[Color 46]</font></td></tr>
+<tr><td>[Color 2]</td><td><font color="#FFFFFF">[Color 2]</font></td>
+<td>&nbsp;</td><td bgcolor="#9999FF">[Color 17]</td>
+<td><font color="#9999FF">[Color 17]</font></td><td>&nbsp;</td>
+<td bgcolor="#0000FF">[Color 32]</td>
+<td><font color="#0000FF">[Color 32]</font></td><td>&nbsp;</td>
+<td bgcolor="#666699">[Color 47]</td>
+<td><font color="#666699">[Color 47]</font></td></tr>
+<tr><td bgcolor="#FF0000">[Color 3]</td>
+<td><font color="#FF0000">[Color 3]</font></td><td>&nbsp;</td>
+<td bgcolor="#993366">[Color 18]</td>
+<td><font color="#993366">[Color 18]</font></td><td>&nbsp;</td>
+<td bgcolor="#00CCFF">[Color 33]</td>
+<td><font color="#00CCFF">[Color 33]</font></td><td>&nbsp;</td>
+<td bgcolor="#969696">[Color 48]</td>
+<td><font color="#969696">[Color 48]</font></td></tr>
+<tr><td bgcolor="#00FF00">[Color 4]</td>
+<td><font color="#00FF00">[Color 4]</font></td><td>&nbsp;</td>
+<td bgcolor="#FFFFCC">[Color 19]</td>
+<td><font color="#FFFFCC">[Color 19]</font></td><td>&nbsp;</td>
+<td bgcolor="#CCFFFF">[Color 34]</td>
+<td><font color="#CCFFFF">[Color 34]</font></td><td>&nbsp;</td>
+<td bgcolor="#003366">[Color 49]</td>
+<td><font color="#003366">[Color 49]</font></td></tr>
+<tr><td bgcolor="#0000FF">[Color 5]</td>
+<td><font color="#0000FF">[Color 5]</font></td><td>&nbsp;</td>
+<td bgcolor="#CCFFFF">[Color 20]</td>
+<td><font color="#CCFFFF">[Color 20]</font></td><td>&nbsp;</td>
+<td bgcolor="#CCFFCC">[Color 35]</td>
+<td><font color="#CCFFCC">[Color 35]</font></td><td>&nbsp;</td>
+<td bgcolor="#339966">[Color 50]</td>
+<td><font color="#339966">[Color 50]</font></td></tr>
+<tr><td bgcolor="#FFFF00">[Color 6]</td>
+<td><font color="#FFFF00">[Color 6]</font></td><td>&nbsp;</td>
+<td bgcolor="#660066">[Color 21]</td>
+<td><font color="#660066">[Color 21]</font></td><td>&nbsp;</td>
+<td bgcolor="#FFFF99">[Color 36]</td>
+<td><font color="#FFFF99">[Color 36]</font></td><td>&nbsp;</td>
+<td bgcolor="#003300">[Color 51]</td>
+<td><font color="#003300">[Color 51]</font></td></tr>
+<tr><td bgcolor="#FF00FF">[Color 7]</td>
+<td><font color="#FF00FF">[Color 7]</font></td><td>&nbsp;</td>
+<td bgcolor="#FF8080">[Color 22]</td>
+<td><font color="#FF8080">[Color 22]</font></td><td>&nbsp;</td>
+<td bgcolor="#99CCFF">[Color 37]</td>
+<td><font color="#99CCFF">[Color 37]</font></td><td>&nbsp;</td>
+<td bgcolor="#333300">[Color 52]</td>
+<td><font color="#333300">[Color 52]</font></td></tr>
+<tr><td bgcolor="#00FFFF">[Color 8]</td>
+<td><font color="#00FFFF">[Color 8]</font></td><td>&nbsp;</td>
+<td bgcolor="#0066CC">[Color 23]</td>
+<td><font color="#0066CC">[Color 23]</font></td><td>&nbsp;</td>
+<td bgcolor="#FF99CC">[Color 38]</td>
+<td><font color="#FF99CC">[Color 38]</font></td><td>&nbsp;</td>
+<td bgcolor="#993300">[Color 53]</td>
+<td><font color="#993300">[Color 53]</font></td></tr>
+<tr><td bgcolor="#800000">[Color 9]</td>
+<td><font color="#800000">[Color 9]</font></td><td>&nbsp;</td>
+<td bgcolor="#CCCCFF">[Color 24]</td>
+<td><font color="#CCCCFF">[Color 24]</font></td><td>&nbsp;</td>
+<td bgcolor="#CC99FF">[Color 39]</td>
+<td><font color="#CC99FF">[Color 39]</font></td><td>&nbsp;</td>
+<td bgcolor="#993366">[Color 54]</td>
+<td><font color="#993366">[Color 54]</font></td></tr>
+<tr><td bgcolor="#008000">[Color 10]</td>
+<td><font color="#008000">[Color 10]</font></td><td>&nbsp;</td>
+<td bgcolor="#000080">[Color 25]</td>
+<td><font color="#000080">[Color 25]</font></td><td>&nbsp;</td>
+<td bgcolor="#FFCC99">[Color 40]</td>
+<td><font color="#FFCC99">[Color 40]</font></td><td>&nbsp;</td>
+<td bgcolor="#333399">[Color 55]</td>
+<td><font color="#333399">[Color 55]</font></td></tr>
+<tr><td bgcolor="#000080">[Color 11]</td>
+<td><font color="#000080">[Color 11]</font></td><td>&nbsp;</td>
+<td bgcolor="#FF00FF">[Color 26]</td>
+<td><font color="#FF00FF">[Color 26]</font></td><td>&nbsp;</td>
+<td bgcolor="#3366FF">[Color 41]</td>
+<td><font color="#3366FF">[Color 41]</font></td><td>&nbsp;</td>
+<td bgcolor="#333333">[Color 56]</td>
+<td><font color="#333333">[Color 56]</font></td></tr>
+<tr><td bgcolor="#808000">[Color 12]</td>
+<td><font color="#808000">[Color 12]</font></td><td>&nbsp;</td>
+<td bgcolor="#FFFF00">[Color 27]</td>
+<td><font color="#FFFF00">[Color 27]</font></td><td>&nbsp;</td>
+<td bgcolor="#33CCCC">[Color 42]</td>
+<td><font color="#33CCCC">[Color 42]</font></td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td></tr>
+<tr><td bgcolor="#800080">[Color 13]</td>
+<td><font color="#800080">[Color 13]</font></td><td>&nbsp;</td>
+<td bgcolor="#00FFFF">[Color 28]</td>
+<td><font color="#00FFFF">[Color 28]</font></td><td>&nbsp;</td>
+<td bgcolor="#99CC00">[Color 43]</td>
+<td><font color="#99CC00">[Color 43]</font></td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td></tr>
+<tr><td bgcolor="#008080">[Color 14]</td>
+<td><font color="#008080">[Color 14]</font></td><td>&nbsp;</td>
+<td bgcolor="#800080">[Color 29]</td>
+<td><font color="#800080">[Color 29]</font></td><td>&nbsp;</td>
+<td bgcolor="#FFCC00">[Color 44]</td>
+<td><font color="#FFCC00">[Color 44]</font></td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td></tr>
+</tbody></table>
+<p id="dpalette">&nbsp;<!--== ================ ==-->
+<!-- ======================================= -->
+</p><table align="center" bgcolor="#FFFFFF" border="1" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td align="center" bgcolor="#000000"><font color="#FFFFFF"><b>1</b></font></td>
+<td align="center" bgcolor="#993300"><font color="#FFFFFF"><b>53</b></font></td>
+<td align="center" bgcolor="#333300"><font color="#FFFFFF"><b>52</b></font></td>
+<td align="center" bgcolor="#003300"><font color="#FFFFFF"><b>51</b></font></td>
+<td align="center" bgcolor="#003366"><font color="#FFFFFF"><b>49</b></font></td>
+<td align="center" bgcolor="#000080"><font color="#FFFFFF"><b>11</b></font></td>
+<td align="center" bgcolor="#333399"><font color="#FFFFFF"><b>55</b></font></td>
+<td align="center" bgcolor="#333333"><font color="#FFFFFF"><b>56</b></font></td></tr>
+<tr>
+<td align="center" bgcolor="#800000"><font color="#FFFFFF"><b>9</b></font></td>
+<td align="center" bgcolor="#FF6600"><font color="#FFFFFF"><b>46</b></font></td>
+<td align="center" bgcolor="#808000"><font color="#FFFFFF"><b>12</b></font></td>
+<td align="center" bgcolor="#008000"><font color="#FFFFFF"><b>10</b></font></td>
+<td align="center" bgcolor="#008080"><font color="#FFFFFF"><b>14</b></font></td>
+<td align="center" bgcolor="#0000FF"><font color="#FFFFFF"><b>5</b></font></td>
+<td align="center" bgcolor="#666699"><font color="#FFFFFF"><b>47</b></font></td>
+<td align="center" bgcolor="#808080"><font color="#FFFFFF"><b>16</b></font></td></tr>
+<tr><td align="center" bgcolor="#FF0000"><b>3</b></td>
+<td align="center" bgcolor="#FF9900"><b>45</b></td>
+<td align="center" bgcolor="#99CC00"><b>43</b></td>
+<td align="center" bgcolor="#339966"><font color="#FFFFFF"><b>50</b></font></td>
+<td align="center" bgcolor="#33CCCC"><font color="#FFFFFF"><b>42</b></font></td>
+<td align="center" bgcolor="#3366FF"><font color="#FFFFFF"><b>41</b></font></td>
+<td align="center" bgcolor="#800080"><font color="#FFFFFF"><b>13</b></font></td>
+<td align="center" bgcolor="#969696"><b>48</b></td></tr>
+<tr><td align="center" bgcolor="#FF00FF"><b>7</b></td>
+<td align="center" bgcolor="#FFCC00"><b>44</b></td>
+<td align="center" bgcolor="#FFFF00"><b>6</b></td>
+<td align="center" bgcolor="#00FF00"><b>4</b></td>
+<td align="center" bgcolor="#00FFFF"><b>8</b></td>
+<td align="center" bgcolor="#00CCFF"><b>33</b></td>
+<td align="center" bgcolor="#993366"><font color="#FFFFFF"><b>54</b></font></td>
+<td align="center" bgcolor="#C0C0C0"><b>15</b></td></tr>
+<tr><td align="center" bgcolor="#FF99CC"><b>38</b></td>
+<td align="center" bgcolor="#FFCC99"><b>40</b></td>
+<td align="center" bgcolor="#FFFF99"><b>36</b></td>
+<td align="center" bgcolor="#CCFFCC"><b>35</b></td>
+<td align="center" bgcolor="#CCFFFF"><b>34</b></td>
+<td align="center" bgcolor="#99CCFF"><b>37</b></td>
+<td align="center" bgcolor="#CC99FF"><b>39</b></td>
+<td align="center"><b>2</b></td></tr>
+<tr>
+<td colspan="8" align="center">additional 16 colors below are not shown on the 40 color toolbar palette but can be seen under  Format, Cells, Pattern</td></tr>
+<tr>
+<td align="center" bgcolor="#9999FF"><font color="#FFFFFF"><b>17</b></font></td>
+<td align="center" bgcolor="#993366"><font color="#FFFFFF"><b>18</b></font></td>
+<td align="center" bgcolor="#FFFFCC"><b>19</b></td>
+<td align="center" bgcolor="#CCFFFF"><b>20</b></td>
+<td align="center" bgcolor="#660066"><font color="#FFFFFF"><b>21</b></font></td>
+<td align="center" bgcolor="#FF8080"><b>22</b></td>
+<td align="center" bgcolor="#0066CC"><font color="#FFFFFF"><b>23</b></font></td>
+<td align="center" bgcolor="#CCCCFF"><b>24</b></td></tr>
+<tr>
+<td align="center" bgcolor="#000080"><font color="#FFFFFF"><b>25</b></font></td>
+<td align="center" bgcolor="#FF00FF"><b>26</b></td>
+<td align="center" bgcolor="#FFFF00"><b>27</b></td>
+<td align="center" bgcolor="#00FFFF"><b>28</b></td>
+<td align="center" bgcolor="#800080"><font color="#FFFFFF"><b>29</b></font></td>
+<td align="center" bgcolor="#800000"><font color="#FFFFFF"><b>30</b></font></td>
+<td align="center" bgcolor="#008080"><font color="#FFFFFF"><b>31</b></font></td>
+<td align="center" bgcolor="#0000FF"><font color="#FFFFFF"><b>32</b></font></td></tr>
+<tr>
+<td colspan="8" align="center"><b>Of the descriptive color names only those for index numbers 1 - 8 can be used in coding.  </b></td></tr>
+<tr>
+<td align="center" bgcolor="#000000"><font color="#FFFFFF"><b>Black</b></font></td>
+<td align="center" bgcolor="#993300"><font color="#FFFFFF"><b>Brown</b></font></td>
+<td align="center" bgcolor="#333300"><font color="#FFFFFF"><b>Olive Green</b></font></td>
+<td align="center" bgcolor="#003300"><font color="#FFFFFF"><b>Dark Green</b></font></td>
+<td align="center" bgcolor="#003366"><font color="#FFFFFF"><b>Dark Teal</b></font></td>
+<td align="center" bgcolor="#000080"><font color="#FFFFFF"><b>Dark Blue</b></font></td>
+<td align="center" bgcolor="#333399"><font color="#FFFFFF"><b>Indigo</b></font></td>
+<td align="center" bgcolor="#333333"><font color="#FFFFFF"><b>Gray-80%</b></font></td></tr>
+<tr>
+<td align="center" bgcolor="#800000"><font color="#FFFFFF"><b>Dark Red</b></font></td>
+<td align="center" bgcolor="#FF6600"><font color="#FFFFFF"><b>Orange</b></font></td>
+<td align="center" bgcolor="#808000"><font color="#FFFFFF"><b>Dark Yellow</b></font></td>
+<td align="center" bgcolor="#008000"><font color="#FFFFFF"><b>Green</b></font></td>
+<td align="center" bgcolor="#008080"><font color="#FFFFFF"><b>Teal</b></font></td>
+<td align="center" bgcolor="#0000FF"><font color="#FFFFFF"><b>Blue</b></font></td>
+<td align="center" bgcolor="#666699"><font color="#FFFFFF"><b>Blue-Gray</b></font></td>
+<td align="center" bgcolor="#808080"><font color="#FFFFFF"><b>Gray-50%</b></font></td></tr>
+<tr><td align="center" bgcolor="#FF0000"><b>Red</b></td>
+<td align="center" bgcolor="#FF9900"><b>Light Orange</b></td>
+<td align="center" bgcolor="#99CC00"><b>Lime</b></td>
+<td align="center" bgcolor="#339966"><font color="#FFFFFF"><b>Sea Green</b></font></td>
+<td align="center" bgcolor="#33CCCC"><font color="#FFFFFF"><b>Aqua</b></font></td>
+<td align="center" bgcolor="#3366FF"><font color="#FFFFFF"><b>Light Blue</b></font></td>
+<td align="center" bgcolor="#800080"><font color="#FFFFFF"><b>Violet</b></font></td>
+<td align="center" bgcolor="#969696"><b>Gray-40%</b></td></tr>
+<tr><td align="center" bgcolor="#FF00FF"><b>Pink</b></td>
+<td align="center" bgcolor="#FFCC00"><b>Gold</b></td>
+<td align="center" bgcolor="#FFFF00"><b>Yellow</b></td>
+<td align="center" bgcolor="#00FF00"><b>Bright Green</b></td>
+<td align="center" bgcolor="#00FFFF"><b>Turquoise</b></td>
+<td align="center" bgcolor="#00CCFF"><b>Sky Blue</b></td>
+<td align="center" bgcolor="#993366"><font color="#FFFFFF"><b>Plum</b></font></td>
+<td align="center" bgcolor="#C0C0C0"><b>Gray-25%</b></td></tr>
+<tr><td align="center" bgcolor="#FF99CC"><b>Rose</b></td>
+<td align="center" bgcolor="#FFCC99"><b>Tan</b></td>
+<td align="center" bgcolor="#FFFF99"><b>Light Yellow</b></td>
+<td align="center" bgcolor="#CCFFCC"><b>Light Green</b></td>
+<td align="center" bgcolor="#CCFFFF"><b>Light Turquoise</b></td>
+<td align="center" bgcolor="#99CCFF"><b>Pale Blue</b></td>
+<td align="center" bgcolor="#CC99FF"><b>Lavender</b></td>
+<td align="center"><b>White</b></td></tr>
+<tr><td colspan="8" align="center">&nbsp;
+<font color="red">*to be updated* Excel 2000 names colors below (font not patterns) ******** *** ***** **
+</font></td></tr>
+<tr>
+<td align="center" bgcolor="#9999FF"><font color="#FFFFFF"><b>Periwinkle</b></font></td>
+<td align="center" bgcolor="#993366"><font color="#FFFFFF"><b>Plum+</b></font></td>
+<td align="center" bgcolor="#FFFFCC"><b>Ivory</b></td>
+<td align="center" bgcolor="#CCFFFF"><b>Lite Turquoise</b></td>
+<td align="center" bgcolor="#660066"><font color="#FFFFFF"><b>Dark Purple</b></font></td>
+<td align="center" bgcolor="#FF8080"><b>Coral</b></td>
+<td align="center" bgcolor="#0066CC"><font color="#FFFFFF"><b>Ocean Blue</b></font></td>
+<td align="center" bgcolor="#CCCCFF"><b>Ice Blue</b></td></tr>
+<tr>
+<td align="center" bgcolor="#000080"><font color="#FFFFFF"><b>Dark Blue+</b></font></td>
+<td align="center" bgcolor="#FF00FF"><b>Pink+</b></td>
+<td align="center" bgcolor="#FFFF00"><b>Yellow+</b></td>
+<td align="center" bgcolor="#00FFFF"><b>Turquoise+</b></td>
+<td align="center" bgcolor="#800080"><font color="#FFFFFF"><b>Violet+</b></font></td>
+<td align="center" bgcolor="#800000"><font color="#FFFFFF"><b>Dark Red+</b></font></td>
+<td align="center" bgcolor="#008080"><font color="#FFFFFF"><b>Teal+</b></font></td>
+<td align="center" bgcolor="#0000FF"><font color="#FFFFFF"><b>Blue+</b></font></td></tr>
+</tbody></table>
+<!-- ======================================= -->
+The default ColorIndex numbers can be found in HELP --&gt;. Index --&gt; ColorIndex Property
+<p>
+The colors names indicated on the <a href="#dpalette">color palette</a> are for descriptive purposes only.&nbsp; Excel
+only recognizes names for Color 1 through 8 (Black, White, Red, Green, Blue, Yellow, Magenta, and Cyan).
+</p><p>
+<b>Hex equivalents used in HTML</b><br>
+</p><table align="center" bgcolor="#FFFFFF" border="1" cellpadding="0" cellspacing="0">
+
+<tbody><tr><td><font size="1" face="Courier New">&nbsp;#000000&nbsp;</font>  </td><td bgcolor="#000000"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#993300&nbsp;</font>  </td>
+<td bgcolor="#993300"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#333300&nbsp;</font>  </td><td bgcolor="#333300"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td>
+<td><font size="1" face="Courier New">&nbsp;#003300&nbsp;</font>  </td><td bgcolor="#003300"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#003366&nbsp;</font>  </td>
+<td bgcolor="#003366"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#000080&nbsp;</font>  </td><td bgcolor="#000080"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td>
+<td><font size="1" face="Courier New">&nbsp;#333399&nbsp;</font>  </td><td bgcolor="#333399"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#333333&nbsp;</font>  </td>
+<td bgcolor="#333333"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td></tr>
+<tr><td><font size="1" face="Courier New">&nbsp;#800000&nbsp;</font>  </td><td bgcolor="#800000"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#FF6600&nbsp;</font>  </td>
+<td bgcolor="#FF6600"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#808000&nbsp;</font>  </td><td bgcolor="#808000"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td>
+<td><font size="1" face="Courier New">&nbsp;#008000&nbsp;</font>  </td><td bgcolor="#008000"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#008080&nbsp;</font>  </td>
+<td bgcolor="#008080"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#0000FF&nbsp;</font>  </td><td bgcolor="#0000FF"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td>
+<td><font size="1" face="Courier New">&nbsp;#666699&nbsp;</font>  </td><td bgcolor="#666699"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#808080&nbsp;</font>  </td>
+<td bgcolor="#808080"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td></tr>
+<tr><td><font size="1" face="Courier New">&nbsp;#FF0000&nbsp;</font>  </td><td bgcolor="#FF0000"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#FF9900&nbsp;</font>  </td>
+<td bgcolor="#FF9900"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#99CC00&nbsp;</font>  </td><td bgcolor="#99CC00"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td>
+<td><font size="1" face="Courier New">&nbsp;#339966&nbsp;</font>  </td><td bgcolor="#339966"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#33CCCC&nbsp;</font>  </td>
+<td bgcolor="#33CCCC"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#3366FF&nbsp;</font>  </td><td bgcolor="#3366FF"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td>
+<td><font size="1" face="Courier New">&nbsp;#800080&nbsp;</font>  </td><td bgcolor="#800080"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#969696&nbsp;</font>  </td>
+<td bgcolor="#969696"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td></tr>
+<tr><td><font size="1" face="Courier New">&nbsp;#FF00FF&nbsp;</font>  </td><td bgcolor="#FF00FF"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#FFCC00&nbsp;</font>  </td>
+<td bgcolor="#FFCC00"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#FFFF00&nbsp;</font>  </td><td bgcolor="#FFFF00"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td>
+<td><font size="1" face="Courier New">&nbsp;#00FF00&nbsp;</font>  </td><td bgcolor="#00FF00"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#00FFFF&nbsp;</font>  </td>
+<td bgcolor="#00FFFF"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#00CCFF&nbsp;</font>  </td><td bgcolor="#00CCFF"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td>
+<td><font size="1" face="Courier New">&nbsp;#993366&nbsp;</font>  </td><td bgcolor="#993366"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#C0C0C0&nbsp;</font>  </td>
+<td bgcolor="#C0C0C0"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td></tr>
+<tr><td><font size="1" face="Courier New">&nbsp;#FF99CC&nbsp;</font>  </td><td bgcolor="#FF99CC"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#FFCC99&nbsp;</font>  </td>
+<td bgcolor="#FFCC99"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#FFFF99&nbsp;</font>  </td><td bgcolor="#FFFF99"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td>
+<td><font size="1" face="Courier New">&nbsp;#CCFFCC&nbsp;</font>  </td><td bgcolor="#CCFFCC"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#CCFFFF&nbsp;</font>  </td>
+<td bgcolor="#CCFFFF"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#99CCFF&nbsp;</font>  </td><td bgcolor="#99CCFF"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td>
+<td><font size="1" face="Courier New">&nbsp;#CC99FF&nbsp;</font>  </td><td bgcolor="#CC99FF"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#FFFFFF&nbsp;</font>  </td><td><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td></tr>
+<tr><td colspan="16" align="center" bgcolor="#e8FFe8"><font size="1" face="Courier New">&nbsp; Additional 16 colors below are not shown on the 40 color toolbar palette but can be seen under Format, Cells, Pattern</font></td></tr>
+<tr><td><font size="1" face="Courier New">&nbsp;#9999FF&nbsp;</font>  </td><td bgcolor="#9999FF"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#993366&nbsp;</font>  </td>
+<td bgcolor="#993366"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#FFFFCC&nbsp;</font>  </td><td bgcolor="#FFFFCC"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td>
+<td><font size="1" face="Courier New">&nbsp;#CCFFFF&nbsp;</font>  </td><td bgcolor="#CCFFFF"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#660066&nbsp;</font>  </td>
+<td bgcolor="#660066"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#FF8080&nbsp;</font>  </td><td bgcolor="#FF8080"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td>
+<td><font size="1" face="Courier New">&nbsp;#0066CC&nbsp;</font>  </td><td bgcolor="#0066CC"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#CCCCFF&nbsp;</font>  </td>
+<td bgcolor="#CCCCFF"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td></tr>
+<tr><td><font size="1" face="Courier New">&nbsp;#000080&nbsp;</font>  </td><td bgcolor="#000080"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#FF00FF&nbsp;</font>  </td>
+<td bgcolor="#FF00FF"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#FFFF00&nbsp;</font>  </td><td bgcolor="#FFFF00"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td>
+<td><font size="1" face="Courier New">&nbsp;#00FFFF&nbsp;</font>  </td><td bgcolor="#00FFFF"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#800080&nbsp;</font>  </td>
+<td bgcolor="#800080"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#800000&nbsp;</font>  </td><td bgcolor="#800000"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td>
+<td><font size="1" face="Courier New">&nbsp;#008080&nbsp;</font>  </td><td bgcolor="#008080"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td><td><font size="1" face="Courier New">&nbsp;#0000FF&nbsp;</font>  </td>
+<td bgcolor="#0000FF"><font size="1" face="Courier New">&nbsp; &nbsp;&nbsp;</font></td></tr>
+</tbody></table>
+
+
+<h3 id="grayscale">Grayscale choices as seen in the Color Palette &nbsp; (#grayscale)</h3>
+<blockquote>
+<table><tbody><tr><td width="60%"> 
+<table bgcolor="#FFFFFF" border="1" cellpadding="0" cellspacing="0">
+<tbody><tr align="center" bgcolor="#d8d8d8">
+<td>&nbsp;</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td></tr>
+<tr><td bgcolor="#d8d8d8">1</td><td><b>Palette</b></td><td><b>Sample</b></td>
+<td><b>%</b></td><td><b>R</b></td><td><b>G</b></td><td><b>B</b></td>
+<td><b>Dec</b></td><td><b>Calc</b></td><td><b>Formula</b></td></tr>
+<tr><td bgcolor="#d8d8d8">2</td><td><b>black</b></td>
+<td bgcolor="#000000">&nbsp;</td><td align="right">100</td>
+<td align="right">00</td><td align="right">00</td><td align="right">00</td>
+<td align="right">0</td><td align="right">0</td><td>=(100-C2)*256/100</td></tr>
+<tr><td bgcolor="#d8d8d8">3</td><td><b>gray-80%</b></td>
+<td bgcolor="#333333">&nbsp;</td><td align="right">80</td>
+<td align="right">33</td><td align="right">33</td><td align="right">33</td>
+<td align="right">51</td><td align="right">51.2</td><td>=(100-C3)*256/100</td></tr>
+<tr><td bgcolor="#d8d8d8">4</td><td><b>gray-50%</b></td>
+<td bgcolor="#808080">&nbsp;</td><td align="right">50</td>
+<td align="right">80</td><td align="right">80</td><td align="right">80</td>
+<td align="right">128</td><td align="right">128</td><td>=(100-C4)*256/100</td></tr>
+<tr><td bgcolor="#d8d8d8">5</td><td><b>gray-40%</b></td>
+<td bgcolor="#969696">&nbsp;</td><td align="right">40</td>
+<td align="right">96</td><td align="right">96</td><td align="right">96</td>
+<td align="right">150</td><td align="right">153.6</td><td>=(100-C5)*256/100</td></tr>
+<tr><td bgcolor="#d8d8d8">6</td><td><b>gray-25%</b></td>
+<td bgcolor="#C0C0C0">&nbsp;</td><td align="right">25</td><td>C0</td><td>C0</td>
+<td>C0</td><td align="right">192</td><td align="right">192</td>
+<td>=(100-C6)*256/100</td></tr>
+<tr><td bgcolor="#d8d8d8">7</td><td><b>white</b></td><td>&nbsp;</td>
+<td align="right">0</td><td>FF</td><td>FF</td><td>FF</td>
+<td align="right">256</td><td align="right">256</td><td>=(100-C7)*256/100</td></tr>
+</tbody></table>
+</td><td>&nbsp;</td><td width="40%">
+<img src="Excel_Colors_fichiers/palette_gray.jpg" width="199" height="41">
+<p>You can use the <a href="#detector">Color Detector</a> to see the
+RGB or Hex color values by using it to click here or on the color palette custom panel.
+</p><p>Click to view this page in 
+<a href="javascript:document.body.style.filter='gray';void(0);">grayscale</a> [IE only], hit F5 to restore.&nbsp;
+<a href="javascript:void(document.bgColor='#FFFFFF')">Background to White</a>.&nbsp;
+Read more about <a href="http://dmcritchie.mvps.org/ie/bookmarklets.htm" title="HTML Bookmarklets">bookmarklets</a>.
+</p></td></tr></tbody></table>
+<p><b>Modifications to Palette on a grayscale</b><br>
+<font size="-1">
+Tools, Options, Color (tab), 
+Select a palette color to be modified,
+modify (button)</font><font size="-2">
+<br>on my Excel 2000 at this point
+Standard tab has 17 preselected 
+white/ gray/ black choices at the bottom,
+choose any of them and you get a 
+gray scale when you switch
+to the custom tab you should see 
+the RGB values being
+equal and will change as you 
+slide the choice selector. </font>
+
+
+</p></blockquote>
+
+
+
+
+<h2 id="formatting">Colors in Cell Formatting (#formatting)</h2>
+<blockquote>
+The following colors may be used in formatting statements:&nbsp; (see color table above)
+<br>&nbsp;  &nbsp; black, blue, green, cyan, red, magenta, yellow, white; and,
+Color1, color2, color3, ..., color56
+<p>
+The parts of the format (unless changed) are:
+<br>&nbsp;  &nbsp; positive numbers; negative numbers; zero; text
+</p></blockquote>
+
+<h3 id="custom">Custom Formatting (#custom)</h3>
+For more information on formatting see your Excel HELP and 
+my <a href="http://dmcritchie.mvps.org/excel/formula.htm">Formula</a> page and particularly 
+<a href="http://dmcritchie.mvps.org/excel/formula.htm#custom">Custom Cell Formatting</a>.
+<br>&nbsp;
+<table border="0"><tbody><tr><td>
+<table style="font-family: arial; font-size: 10pt;" align="center" bgcolor="#FFFFFF" border="1" cellpadding="0" cellspacing="0">
+<tbody><tr><td align="right"><font color="#FF0000">&nbsp; -4&nbsp;</font></td>
+<td>&nbsp;[&gt;=5]General; [<b>Red</b>]-General; [Blue]General</td></tr>
+<tr><td align="right"><font color="#FF0000">&nbsp; -1&nbsp;</font></td>
+<td>&nbsp;[&gt;=5]General; [<b>Red</b>]-General; [Blue]General</td></tr>
+<tr><td align="right"><font color="#0000FF">&nbsp; 0&nbsp;</font></td>
+<td>&nbsp;[&gt;=5]General; [Red]-General; [<b>Blue</b>]General</td></tr>
+<tr><td align="right"><font color="#0000FF">&nbsp; 2&nbsp;</font></td>
+<td>&nbsp;[&gt;=5]General; [Red]-General; [<b>Blue</b>]General</td></tr>
+<tr><td align="right"><font color="#0000FF">&nbsp; 4&nbsp;</font></td>
+<td>&nbsp;[&gt;=5]General; [Red]-General; [<b>Blue</b>]General</td></tr>
+<tr><td align="right">&nbsp;5&nbsp;</td>
+<td>&nbsp;<b>[&gt;=5]</b>General; [Red]-General; [Blue]General</td></tr>
+<tr><td align="right">&nbsp;10&nbsp;</td>
+<td>&nbsp;<b>[&gt;=5]</b>General; [Red]-General; [Blue]General</td></tr>
+<tr><td>&nbsp;txt</td><td>&nbsp;[&gt;=5]General; [Red]-General; [Blue]General</td></tr>
+</tbody></table>
+</td><td>&nbsp;</td><td>
+<table style="font-family: arial; font-size: 9pt;" bgcolor="#FFFFFF" border="1">
+<tbody><tr valign="bottom" align="left">
+<td><b>
+Entry</b></td>
+<td><b>
+Formatted</b></td>
+<td><b>
+Format -- <a href="http://dmcritchie.mvps.org/excel/formula.htm#GetFormat">GetFormat(cell)</a> was used to display Format</b></td>
+</tr>
+<tr><td>&nbsp;-7</td><td align="right"><font color="#FF0000">&nbsp;- 7.00&nbsp;</font></td>
+<td>&nbsp;[Blue][&gt;=5]0.00; <b>[Red]</b>[&lt;=2]-0.00; [Color 42]General; [magenta]"Text:"@</td></tr>
+<tr><td>&nbsp;-3</td><td align="right"><font color="#FF0000">&nbsp;- 3.00&nbsp;</font></td>
+<td>&nbsp;[Blue][&gt;=5]0.00; [Red][&lt;=2]-0.00; [Color 42]General; [magenta]"Text:"@</td></tr>
+<tr><td>&nbsp;-2</td><td align="right"><font color="#FF0000">&nbsp;- 2.00&nbsp;</font></td>
+<td>&nbsp;[Blue][&gt;=5]0.00; [Red][&lt;=2]-0.00; [Color 42]General; [magenta]"Text:"@</td></tr>
+<tr><td>&nbsp;-1</td><td align="right"><font color="#FF0000">&nbsp;- 1.00&nbsp;</font></td>
+<td>&nbsp;[Blue][&gt;=5]0.00; [Red][&lt;=2]-0.00; [Color 42]General; [magenta]"Text:"@</td></tr>
+<tr><td>&nbsp;0</td><td align="right"><font color="#FF0000">&nbsp; 0.00&nbsp;</font></td>
+<td>&nbsp;[Blue][&gt;=5]0.00; [Red][&lt;=2]-0.00; [Color 42]General; [magenta]"Text:"@</td></tr>
+<tr><td>&nbsp;1</td><td align="right"><font color="#FF0000">&nbsp; 1.00&nbsp;</font></td>
+<td>&nbsp;[Blue][&gt;=5]0.00; [Red][&lt;=2]-0.00; [Color 42]General; [magenta]"Text:"@</td></tr>
+<tr><td>&nbsp;2</td><td align="right"><font color="#FF0000">&nbsp; 2.00&nbsp;</font></td>
+<td>&nbsp;[Blue][&gt;=5]0.00; [Red][&lt;=2]-0.00; [Color 42]General; [magenta]"Text:"@</td></tr>
+<tr><td>&nbsp;3</td><td align="right"><font color="#99CC00">&nbsp; 3&nbsp;</font></td>
+<td>&nbsp;[Blue][&gt;=5]0.00; [Red][&lt;=2]-0.00; <b>[Color 42]</b>General; [magenta]"Text:"@</td></tr>
+<tr><td>&nbsp;4</td><td align="right"><font color="#99CC00">&nbsp; 4&nbsp;</font></td>
+<td>&nbsp;[Blue][&gt;=5]0.00; [Red][&lt;=2]-0.00; [Color 42]General; [magenta]"Text:"@</td></tr>
+<tr><td>&nbsp;5</td><td align="right"><font color="#0000FF">&nbsp;5.00&nbsp;</font></td>
+<td>&nbsp;<b>[Blue]</b>[&gt;=5]0.00; [Red][&lt;=2]-0.00; [Color 42]General; [magenta]"Text:"@</td></tr>
+<tr><td>&nbsp;6</td><td align="right"><font color="#0000FF">&nbsp;6.00&nbsp;</font></td>
+<td>&nbsp;[Blue][&gt;=5]0.00; [Red][&lt;=2]-0.00; [Color 42]General; [magenta]"Text:"@</td></tr>
+<tr><td>&nbsp;7</td><td align="right"><font color="#0000FF">&nbsp;7.00&nbsp;</font></td>
+<td>&nbsp;[Blue][&gt;=5]0.00; [Red][&lt;=2]-0.00; [Color 42]General; [magenta]"Text:"@</td></tr>
+<tr><td>&nbsp;Test </td><td><font color="#FF00FF">&nbsp; Text:Test </font></td>
+<td>&nbsp;[Blue][&gt;=5]0.00; [Red][&lt;=2]-0.00; [Color 45]General; [magenta]"Text:"@</td></tr>
+</tbody></table>
+</td></tr></tbody></table>
+
+<blockquote><i><b>
+Format for ...   (each format is separated by a semicolon)<br>
+Positive Numbers(default); Negative Numbers(default); Zero(All other numbers); Text
+</b></i></blockquote>
+<p>Also see my <a href="http://dmcritchie.mvps.org/excel/formula.htm#cellformat">Formula</a> page (starting at #cellformat).&nbsp; A generalized 
+<a href="http://groups.google.co.uk/groups?threadm=%23AqpybxJFHA.2936%40TK2MSFTNGP15.phx.gbl">posting</a> (2004-03-12)  
+related to the above Cell Formatting, and to <a href="http://dmcritchie.mvps.org/excel/condfmt.htm">Conditional Formatting</a>,
+and <a href="http://dmcritchie.mvps.org/excel/event.htm">Event macros</a>.&nbsp; Two more examples of cell formatting:
+</p><pre>  [Red][&gt;=5]General;[Color40][&gt;=2]General;[Color10]General;[Color30]@
+
+  [Red][&gt;0]"No";[Green]"Yes"</pre>
+<p>Conditional Formatting is covered on it's own <a href="http://dmcritchie.mvps.org/excel/condfmt.htm">page</a>
+and can be used for <a href="http://www.cpearson.com/excel/banding.htm">color banding</a> (like greenbar paper) [also <a href="http://dmcritchie.mvps.org/excel/sumdata.htm#banding">see</a>].
+
+</p><hr color="#40FF40">
+<hr color="#40FF40">
+<h2 id="chrome">Pastel colors for 50% backgrounds HTML  (#chrome)</h2>
+<blockquote>
+<table width="80%" border="1">
+<tbody><tr><td colspan="8" bgcolor="#FFFFFF">&nbsp;</td></tr>
+<tr align="center">
+<td width="10%" align="Center" bgcolor="#FEF5A8">FEF5A8</td>
+<td width="10%" align="Center" bgcolor="#C5F19A">C5F19A</td>
+<td width="10%" align="Center" bgcolor="#FFD8A0">FFD8A0</td>
+<td width="10%" align="Center" bgcolor="#F5DDB7">F5DDB7</td>
+<td width="10%" align="Center" bgcolor="#B9D0E8">B9D0E8</td>
+<td width="10%" align="Center" bgcolor="#D6BFD4">D6BFD4</td>
+<td width="10%" align="Center" bgcolor="#F79494">F79494</td>
+<td width="10%" align="Center" bgcolor="#D3D7CF">D3D7CF</td>
+</tr><tr><td colspan="8" align="center" bgcolor="#FFFFFF">
+<a href="http://en.wikipedia.org/wiki/Template_talk:Navigation" title="Firefox">
+template_talk</a></td></tr>
+</tbody></table>
+<p>
+</p><table border="1"><tbody><tr>
+<td bgcolor="#FFFFCC">#FFFFCC</td>
+<td bgcolor="#FBF4D4">#FBF4D4</td>
+<td bgcolor="#FFFF80">#FFFF80</td>
+<td bgcolor="#F3E078">#F3E078</td>
+<td bgcolor="#B3B300">#B3B300</td>
+<td bgcolor="#BFCFFF">#BFCFFF</td>
+<td bgcolor="#CCCCFF">#CCCCFF</td>
+<td bgcolor="#F3E0FF">#F3E0FF</td>
+<td bgcolor="#DCFFDC">#DCFFDC</td>
+</tr></tbody></table>
+
+</blockquote>
+<h2 id="DOS">Changing the Colors of your DOS session &nbsp; (#DOS)</h2>
+<blockquote>
+Color change is available at least in WinNT.&nbsp;
+<p>
+Changing colors of your DOS window may or may not work for you.&nbsp; I 
+changed mine mainly in order to work with a specific package so that the
+ wording is black on white.&nbsp; This is easy to change but where there
+ is no text the color will remain black.&nbsp; (<a href="http://dmcritchie.mvps.org/dmcritchie/rexx/spf03.htm#shortcut">directions</a>).&nbsp;
+  Color can also be changed in the DOS window with the color command 
+(Color&nbsp;F0), which can be put into your Autoexec.bat -- to be 
+effective you must reboot.&nbsp; The screen can still turn black upon 
+exiting an application but can be instantly reverted to white by typing 
+Color.
+</p></blockquote>
+<h2 id="OE">The DOS assignments of the 16 colors (0-15) &nbsp; &nbsp;(#OE)</h2>
+<blockquote>
+The normal VGA assignments <b>do not apply to Excel</b>, but they do apply to older VGA monitors used on IBM mainframes and DOS color assignments.
+<center>
+<table bgcolor="#FFFFFF">
+<tbody><tr align="center">
+<td bgcolor="#000000">0                     </td>
+<td bgcolor="#000080">1                     </td>
+<td bgcolor="#008000">2                     </td>
+<td bgcolor="#008080">3                     </td>
+<td bgcolor="#800000">4                     </td>
+<td bgcolor="#800080">5                     </td>
+<td bgcolor="#808000">6                     </td>
+<td align="center" bgcolor="#C0C0C0">7        </td>
+</tr><tr align="CENTEr">
+<td>000000<br>               Black          </td>
+<td>000080<br>               Navy           </td>
+<td>008000<br>               Green          </td>
+<td>008080<br>               Teal           </td>
+<td>800000<br>               Maroon         </td>
+<td>800080<br>               Purple         </td>
+<td>808000<br>               Olive          </td>
+<td>C0C0C0<br>               Silver         </td>
+</tr>
+<tr><td colspan="8" align="center"><font color="blue">The assignments 0-15 are NOT those used by Excel ColorIndex</font></td></tr>
+<tr align="center">
+<td bgcolor="#808080">&nbsp; &nbsp;</td>
+<td bgcolor="#0000FF">&nbsp; &nbsp;</td>
+<td bgcolor="#00FF00">10                    </td>
+<td bgcolor="#00FFFF">11                    </td>
+<td bgcolor="#FF0000">12                    </td>
+<td bgcolor="#FF00FF">13                    </td>
+<td bgcolor="#FFFF00">14                    </td>
+<td bgcolor="#FFFFFF">15                    </td>
+</tr><tr align="center">
+<td>808080<br>               Gray           </td>
+<td>0000FF<br>               Blue           </td>
+<td>00FF00<br>               Lime           </td>
+<td>00FFFF<br>               Cyan*          </td>
+<td>FF0000<br>               Red            </td>
+<td>FF00FF<br>               Magenta*       </td>
+<td>FFFF00<br>               Yellow         </td>
+<td>FFFFFF<br>               White          </td>
+</tr>
+</tbody></table>
+</center>
+<p id="HTML">
+The <a href="http://www.dataoptions.com/refpage.html#colors">Colors supported</a> by Internet Explorer and most browsers in alphabetical order (#HTML):&nbsp;<br>
+<font color="aqua">AQUA</font>,&nbsp;&nbsp;  
+<font color="black">BLACK</font>,&nbsp;&nbsp;  
+<font color="blue">BLUE</font>,&nbsp;&nbsp;  
+<font color="fuchsia">FUCHSIA</font>,&nbsp;&nbsp;  
+<font color="gray">GRAY</font>,&nbsp;&nbsp;  
+<font color="green">GREEN</font>,&nbsp;&nbsp;  
+<font color="lime">LIME</font>,&nbsp;&nbsp;  
+<font color="maroon">MAROON</font>,&nbsp;&nbsp;  
+<font color="navy">NAVY</font>,&nbsp;&nbsp;  
+<font color="olive">OLIVE</font>,&nbsp;&nbsp;  
+<font color="purple">PURPLE</font>,&nbsp;&nbsp;  
+<font color="red">RED</font>,&nbsp;&nbsp;  
+<font color="silver">SILVER</font>,&nbsp;&nbsp;  
+<font color="teal">TEAL</font>,&nbsp;&nbsp;  
+<font color="white">white</font> (white),&nbsp;&nbsp;
+<font color="yellow">yellow</font>&nbsp;&nbsp; &nbsp; [Select area with mouse to read]
+</p><p>
+The above colors are supported in the HTML 3.2 standard but have not been
+universally accepted by all browsers.&nbsp; In HTML the colors are Fuchsia:  #FF00FF
+instead of Magenta;  and  Aqua:  #00FFFF instead of Cyan.
+</p><p id="gamma">#gamma
+<br>The colors <a href="#oe">above</a> and as fonts below are the choices of colors for <b>Outlook Express</b> and
+use the HTML names.&nbsp; Colors 0-6, and 8 are very hard to see
+the difference looking straight at the screen on what would now be an <b>old laptop</b>.<br>
+</p><table align="center" bgcolor="#FFFFFF"><tbody><tr><td>
+<font color="#000000">0 Black</font>,
+<font color="#000080">1 Navy</font>,
+<font color="#008000">2 Green</font>,
+<font color="#008080">3 Teal</font>,
+<font color="#800000">4 Maroon</font>,
+<font color="#800080">5 Purple</font>
+<font color="#808000">6 Olive</font>,
+<font color="#C0C0C0">7 Silver</font>,
+<br>
+<font color="#808080">8 Gray</font>,
+<font color="#0000FF">9 Blue</font>,
+<font color="#00FF00">10 Lime</font>,
+<font color="#00FFFF">11 Aqua+</font>,
+<font color="#FF0000">12 Red</font>,
+<font color="#FF00FF">13 Fuschia</font>,
+<font color="#FFFF00">14 Yellow</font>,
+<font color="#FFFFFF">15 White</font>
+</td></tr></tbody></table>
+<table align="center" bgcolor="#C0C0C0"><tbody><tr><td>
+<font color="#000000">0 Black</font>,
+<font color="#000080">1 Navy</font>,
+<font color="#008000">2 Green</font>,
+<font color="#008080">3 Teal</font>,
+<font color="#800000">4 Maroon</font>,
+<font color="#800080">5 Purple</font>
+<font color="#808000">6 Olive</font>,
+<font color="#C0C0C0">7 Silver</font>,
+<br>
+<font color="#808080">8 Gray</font>,
+<font color="#0000FF">9 Blue</font>,
+<font color="#00FF00">10 Lime</font>,
+<font color="#00FFFF">11 Aqua+</font>,
+<font color="#FF0000">12 Red</font>,
+<font color="#FF00FF">13 Fuschia</font>,
+<font color="#FFFF00">14 Yellow</font>,
+<font color="#FFFFFF">15 White</font>
+</td></tr></tbody></table>
+<table align="center"><tbody><tr><td>
+<font color="#000000">0 Black</font>,
+<font color="#000080">1 Navy</font>,
+<font color="#008000">2 Green</font>,
+<font color="#008080">3 Teal</font>,
+<font color="#800000">4 Maroon</font>,
+<font color="#800080">5 Purple</font>
+<font color="#808000">6 Olive</font>,
+<font color="#C0C0C0">7 Silver</font>,
+<br>
+<font color="#808080">8 Gray</font>,
+<font color="#0000FF">9 Blue</font>,
+<font color="#00FF00">10 Lime</font>,
+<font color="#00FFFF">11 Aqua+</font>,
+<font color="#FF0000">12 Red</font>,
+<font color="#FF00FF">13 Fuschia</font>,
+<font color="#FFFF00">14 Yellow</font>,
+<font color="#FFFFFF">15 White</font>
+</td></tr></tbody></table>
+<table align="center" bgcolor="#F0F0F0"><tbody><tr><td><b>
+<font color="#000000">0 Black</font>,
+<font color="#000080">1 Navy</font>,
+<font color="#008000">2 Green</font>,
+<font color="#008080">3 Teal</font>,
+<font color="#800000">4 Maroon</font>,
+<font color="#800080">5 Purple</font>
+<font color="#808000">6 Olive</font>,
+<font color="#C0C0C0">7 Silver</font>,
+<br>
+<font color="#808080">8 Gray</font>,
+<font color="#0000FF">9 Blue</font>,
+<font color="#00FF00">10 Lime</font>,
+<font color="#00FFFF">11 Aqua+</font>,
+<font color="#FF0000">12 Red</font>,
+<font color="#FF00FF">13 Fuschia</font>,
+<font color="#FFFF00">14 Yellow</font>,
+<font color="#FFFFFF">15 White</font></b>
+</td></tr></tbody></table>
+<p>You should be able to distinguish link colors, if you can&#8217;t, consider
+ specifying your own default colors (or even overrides).&nbsp; Click 
+<a href="#gamma">here</a> to establish visited links below.
+</p><table align="center">
+<tbody><tr><td><b>Possible link<br>color changes</b></td><td>&nbsp;</td>
+<td><u><font color="#0000FF">link &nbsp;&nbsp;&nbsp; #0000FF</font></u>
+   <br><font color="#FF00FF">visited #FF00FF</font></td><td>&nbsp;</td>
+<td bgcolor="#FFFFFF"><u><font color="#0000FF">link &nbsp;&nbsp;&nbsp; #0000FF</font> </u>
+   <br><font color="#FF00FF">visited #FF00FF</font></td><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><b>Your own<br>link colors</b></td><td>&nbsp;</td>
+<td><a href="http://example.com/gammaxy.htm">unvisited link</a><br><a href="#gamma">visted link</a></td>
+<td bgcolor="#FFFFFF"><a href="http://example.com/gammyaxy">unvisited link</a><br><a href="#gamma">visted link</a></td>
+</tr></tbody></table>
+<p>You can change your own default colors for links:&nbsp;
+<br>&nbsp;&nbsp; <b>In Internet Explorer</b> use Tools, Internet, General (tab), Fonts.&nbsp;
+<br>&nbsp; &nbsp; &nbsp; &nbsp;(Not recommended but Accessibility button has option to override web page colors.)
+<br>&nbsp;&nbsp; <b>In Firefox</b> use Tools, Options, General (icon on left), Fonts and Colors, OK.&nbsp; (color override on same dialog.)
+</p><p><b>To temporarily override a web pages visited links color</b> you can use a
+<a href="http://dmcritchie.mvps.org/ie/bookmarklets.htm#make">bookmarklet</a> which would be
+in effect until you reload the page or hit F5 (Reset/Reload).&nbsp;
+The bookmarklet <a class="bml" href="javascript:styles=':visited,%20:visited%20*%20{%20color:%20#FF0000!important;%20}';%20newSS%20=%20document.createElement('link');%20newSS.rel%20=%20'stylesheet';%20newSS.href%20=%20'data:text/css,'%20+%20escape(styles);%20document.documentElement.childNodes[0].appendChild(newSS);%20void%200">Links Visited to RED</a> is particularly useful when viewing Google search results.&nbsp; (Try it yourself, and Reset with F5.&nbsp; If you like it
+drag to links bar or a folder in your links bar, and do look at my
+bookmarklets page.)  
+</p><p>Since changing the actual colors is not possible, and would be ill advised, I&#8217;m not going to attempt to see if
+it is possible to have eight distinguishable font colors for my laptop when
+within&nbsp; <a href="http://dmcritchie.mvps.org/ie/oe6.htm">Outlook Express</a> usage.&nbsp;</p>
+<p>The <b>Gamma can be changed for colors</b>, and is somewhat equivalent from moving up or down 
+when viewing the laptop monitor, or by adjusting the tilt of the monitor.&nbsp;
+Most of problem distinguishing color pertains to fonts, backgrounds are okay and 
+bold text better than plain text.&nbsp; To adjust the colors on the monitor use:&nbsp;
+  Control Panel, Settings, Display (monitor), settings (tab), Advanced (button), Color (tab),
+and change the color.&nbsp; The gamma is seen as a color curve that you can distort for each
+of the primary colors (Red, Green, Blue).&nbsp; Other <a href="#CellCommentColor">Display settings</a>.
+</p></blockquote>
+<hr color="red">
+<center><font color="#800000"><b>
+Help &nbsp; Help &nbsp; Help &nbsp; Help &nbsp; Help &nbsp; Help &nbsp;
+Help &nbsp; Help &nbsp; Help &nbsp; Help &nbsp; Help &nbsp; (#Help) &nbsp;
+</b></font></center>
+<hr color="red">
+<h2 id="help">HELP - related information  (#help)</h2>
+<blockquote>
+HELP --&gt; Find --&gt; color --&gt; color --&gt; "Basic number format codes"
+<p>
+HELP --&gt; Index --&gt; colorindex property --&gt; colorindex property
+</p></blockquote>
+<hr color="red">
+<center><font color="#800000"><b>
+Macros &nbsp; Macros &nbsp; Macros &nbsp; Macros &nbsp; 
+Macros &nbsp; Macros &nbsp; Macros &nbsp; Macros &nbsp; Macros &nbsp; (#Macros) &nbsp;
+</b></font></center>
+<hr color="red">
+
+<h2 id="macros">Setting Colors in Excel VBA Macros (#macros)</h2>
+<blockquote>
+<pre>ActiveCell.Borders.Color = RGB(255, 0, 0)
+ActiveCell.Borders(xlTop).Color = RGB(0, 0, 255)
+ActiveCell.Borders(xlBottom).ColorIndex = 18
+
+ActiveCell.Font.ColorIndex = 17
+ActiveCell.Font.Color = RGB(255, 0, 0)
+Selection.Interior.ColorIndex = xlNone  'xlColorIndexAutomatic or xlColorIndexNone
+Selection.Interior.ColorIndex = 5
+Selection.Interior.Color = RGB(200, 250, 200)
+Selection.Interior.Color = &amp;Hc8efac8   'h=Hex,  o=Octal  anyone still use octal
+ActiveCell.Font.Background = {xlAutomatic | xlOpaque | x1Transparent}
+
+Workbooks("BOOK1.XLS").Worksheets("Sheet1").Activate
+ActiveWindow.GridlineColor = RGB(255,0,0)
+
+Members of Excel Constants details:
+Const xlColorIndexNone = -4142 (&amp;HFFFFEFD2)
+Const xlColorIndexAutomatic = -4105 (&amp;HFFFFEFF7)
+Const xlAutomatic = -4105 (&amp;HFFFFEFF7)
+Const xlBackgroundOpaque = 3
+Const xlBackgroundTransparent = 2
+Const xlOpaque = 3
+Const xlTransparent = 2
+</pre>
+</blockquote>
+
+
+<h2 id="ColorFormulas">Coloring Formulas Blue, and remove other font colors &nbsp; (#ColorFormulas)</h2>
+<blockquote>
+You could assign this to a <a href="http://dmcritchie.mvps.org/excel/toolbars.htm">toolbar</a> button.
+<pre>   Sub ColorFormulas()    'xl97 up use xlcelltypeformulas
+     Cells.FONT.ColorIndex = xlAutomatic
+     Selection.SpecialCells(xlFormulas).FONT.ColorIndex = 5
+   End Sub</pre>
+Also see <a href="http://dmcritchie.mvps.org/excel/delempty.htm#coloring">Coloring Cells based on CellType</a>
+as tested with SpecialCells.
+</blockquote>
+<h2 id="FormatUnprotected">Coloring Unprotected Cells Blue &nbsp; (#FormatUnprotected)</h2>
+<blockquote>
+Simulate a Lotus 1-2-3 feature to color unprotected cells blue (<a href="http://www.zdnet.com/pcmag/pctech/content/solutions/ss1520b.htm">ref</a>)
+<pre>Sub FormatUnprotected()
+    For Each Item In Intersect(ActiveSheet.UsedRange, Selection.Cells)
+      If Item.Locked = False Then
+        Item.Font.colorindex = 32
+       End If
+    Next
+End Sub</pre>
+</blockquote>
+<h2 id="chgfont">Changing Font based on interior color and column (#chgfont)</h2>
+<blockquote>
+Check for interior color of 41 (light blue).
+<pre>Sub whiteONblue()
+  Application.ScreenUpdating = False
+  Application.Calculation = xlCalculationManual   'pre XL97 xlManua
+  Dim cell As Range
+  '---Range("A3:N100").Select
+  For Each cell In Selection
+    If cell.Interior.colorindex = 41 And cell.Column = 4 Then
+        cell.Font.colorindex = 2 '2=white, 6=yellow
+    End If
+  Next cell
+  Application.Calculation = xlCalculationAutomatic   'pre XL97 xlManua
+  Application.ScreenUpdating = False
+End Sub
+</pre>
+</blockquote>
+<h2 id="ClearConstantsFromColorCells">Clear Constants from Color Cells &nbsp; (#ClearConstantsFromColorCells)</h2>
+The purpose of ClearConstantsFromColorCells is clear out constants
+from the cells that have an 
+interior color, and to retain the color of the cells.
+Formulas, and empty cells will not be affected and aren't
+even checked.
+<p>
+You can select an entire column without taking 6 seconds to
+process every cell in that column because the cells processed
+must also have constants.&nbsp; Anything located 
+by <a href="http://dmcritchie.mvps.org/excel/proper.htm#specialcells">SpecialCells</a>
+is by definition in the UsedRange.&nbsp; Anything outside the UsedRange
+could have color but won't have constants.
+</p><p>
+Have been doing so many change events lately that I turned
+off events during the execution.&nbsp; There is a little risk here
+with EnableEvents turned off should the subroutine fail  for 
+some reason. 
+</p><pre>Sub ClearConstantsFromColorCells()
+   Application.ScreenUpdating = False
+   Application.Calculation = xlCalculationManual
+   Dim Cell As Range
+   On Error Resume Next   'In case no cells in selection
+   Application.EnableEvents = False
+   For Each Cell In Intersect(Selection, _
+              Cells.SpecialCells(xlConstants))
+      If Cell.Interior.ColorIndex &gt;= 0 Then Cell.ClearContents
+   Next
+   Application.EnableEvents = True
+   Application.Calculation = xlCalculationAutomatic
+   Application.ScreenUpdating = True
+End Sub
+
+</pre>
+</blockquote>
+
+<h2 id="icolorF">Determining Interior Color of Another Cell &nbsp; (#icolorF)</h2>
+<blockquote>
+<pre>  Function showRGB_wrong(rcell)
+    showRGB = rcell.Interior.Color)
+  End Function
+</pre>
+You won't get too far in HTML using&nbsp; <b><i>range</i>.Interior.Color</b> &nbsp;as above which
+is supposed to show RGB but shows them in the wrong order and without leading zeros.&nbsp; HTML has the 
+RGB components in the correct RGB order, so the following would
+be what you need to equate to HTML color definitions.&nbsp; <i>Most people get the HTML wrong
+because range.Interior.Color returns wrong order for RGB components.</i>  For this
+reason the tables show the #prefix used in HTML colors to avoid all ambiguity.
+<pre>  Function showRGB(rcell)
+     Dim xColor As String
+     xColor = Right("000000" &amp; Hex(rcell.Interior.Color), 6)
+     ShowRGB = Right(xColor, 2) &amp; Mid(xColor, 3, 2) _
+      &amp; Left(xColor, 2)
+  End Function
+
+  Function showColorIndex(rcell)
+      showColorIndex = rcell.Interior.ColorIndex
+  End Function
+</pre>
+
+<pre>  Function ShowHTMLcolor(xcell) As String
+     Dim xColor As String
+     xColor = Right("000000" &amp; Hex(xcell.Interior.Color), 6)
+     ShowHTMLcolor = "#" &amp; Right(xColor, 2) &amp; Mid(xColor, 3, 2) _
+      &amp; Left(xColor, 2)
+  End Function
+
+Example: interior colorindex of B28
+&nbsp; &nbsp; &nbsp; =ShowColorIndex(B28)</pre>
+</blockquote>
+<table align="center"><tbody><tr><td width="3%">&nbsp;</td><td bgcolor="#FFFFFF">
+The <a href="http://dmcritchie.mvps.org/excel/shortx2k.htm">shortcut</a> key <b>Ctrl+Alt+F9</b> forces a recalculation of *everything* in all open
+workbooks whether or not Excel *thinks* recalculations are needed.&nbsp; Changing
+a format does not trigger cell recalculation, so you will have to force this
+when you want the values to change.
+<p>The use of Volatile would also work but would probably have a severe
+impact on your use of Excel.&nbsp; the VBA equivalent of the shortcut is<br>
+&nbsp; &nbsp; Application.CalculateFull &nbsp; &nbsp; ' in Excel 2000
+</p></td><td width="25%">&nbsp;</td></tr></tbody></table>
+<h2 id="colorofassignment">Coloring a selection based on a simple cell formula  (#colorofassignment)</h2>
+<table align="right" bgcolor="#FFFFFF" border="1" cellpadding="0" cellspacing="0">
+<caption align="bottom">See <a href="http://groups.google.co.uk/groups?threadm=uk2pNwrZFHA.900%40tk2msftngp13.phx.gbl">posting 2005-06-01</a> in Excel.misc</caption>
+<tbody><tr align="center" bgcolor="#d8d8d8">
+<td>&nbsp;</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td></tr>
+<tr><td align="center" bgcolor="#d8d8d8">&nbsp;1</td><td bgcolor="#FFFF00">&nbsp;A1-1</td>
+<td>&nbsp;</td><td bgcolor="#FFFF00">&nbsp;A1-1</td><td>&nbsp;C1:  =A1</td>
+<td>&nbsp;also tested for formulas like:</td></tr>
+<tr><td align="center" bgcolor="#d8d8d8">&nbsp;2</td><td bgcolor="#FF9900">&nbsp;A2-1</td>
+<td>&nbsp;</td><td bgcolor="#00FFFF">&nbsp;A3-1&nbsp;</td><td>&nbsp;C2:  =A3</td>
+<td>&nbsp;=Sheet4'!A18</td></tr>
+<tr><td align="center" bgcolor="#d8d8d8">&nbsp;3</td>
+<td bgcolor="#00FFFF"><font color="#FF0000">&nbsp;A3-1&nbsp;</font></td><td>&nbsp;</td>
+<td align="right" bgcolor="#CC99FF">&nbsp;100</td><td>&nbsp;C3:  =A4</td>
+<td>&nbsp;='Sheet four'!A18</td></tr>
+<tr><td align="center" bgcolor="#d8d8d8">&nbsp;4</td>
+<td align="right" bgcolor="#CC99FF">&nbsp;$100.00&nbsp;</td><td>&nbsp;</td>
+<td bgcolor="#FF9900">&nbsp;A2-1</td><td>&nbsp;C4:  =A2</td><td>&nbsp;=(D20)</td></tr>
+</tbody></table>
+<blockquote>
+See <a href="http://groups.google.co.uk/groups?threadm=uk2pNwrZFHA.900%40tk2msftngp13.phx.gbl">posting 2005-06-01</a> in Excel.misc
+<pre>Sub ColorOfAssignment()
+    Dim rng As Range, cell As Range
+    Set rng = Selection
+    'rng.Interior.ColorIndex = xlAutomatic   'clear color
+    For Each cell In Intersect(rng, _
+            rng.SpecialCells(xlFormulas))
+        On Error Resume Next
+        cell.Interior.ColorIndex = _
+           Range(Mid(cell.Formula, 2)).Interior.ColorIndex
+        On Error GoTo 0
+    Next cell
+End Sub
+</pre>
+</blockquote>
+<h2 id="formatofassignment">Formatting a selection based on a simple cell formula  (#formatofassignment)</h2>
+<table align="right" bgcolor="#FFFFFF" border="1" cellpadding="0" cellspacing="0">
+<caption align="bottom">See <a href="http://groups.google.co.uk/groups?threadm=uk2pNwrZFHA.900%40tk2msftngp13.phx.gbl">posting 2005-06-01</a> in Excel.misc</caption>
+
+<tbody><tr align="center" bgcolor="#d8d8d8">
+<td>&nbsp;</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td></tr>
+<tr><td align="center" bgcolor="#d8d8d8">&nbsp;1</td><td bgcolor="#FFFF00">&nbsp;A1-1</td>
+<td>&nbsp;</td><td bgcolor="#FFFF00">&nbsp;A1-1</td><td>&nbsp;C1:  =A1</td>
+<td>&nbsp;also tested for formulas like:</td></tr>
+<tr><td align="center" bgcolor="#d8d8d8">&nbsp;2</td><td bgcolor="#FF9900">&nbsp;A2-1</td>
+<td>&nbsp;</td><td bgcolor="#00FFFF"><font color="#FF0000">&nbsp;A3-1</font></td>
+<td>&nbsp;C2:  =A3</td><td>&nbsp;=Sheet4'!A18</td></tr>
+<tr><td align="center" bgcolor="#d8d8d8">&nbsp;3</td>
+<td bgcolor="#00FFFF"><font color="#FF0000">&nbsp;A3-1</font></td><td>&nbsp;</td>
+<td align="right" bgcolor="#CC99FF">&nbsp;&nbsp; $100.00&nbsp;</td><td>&nbsp;C3:  =A4</td>
+<td>&nbsp;='Sheet four'!A18</td></tr>
+<tr><td align="center" bgcolor="#d8d8d8">&nbsp;4</td>
+<td align="right" bgcolor="#CC99FF">&nbsp;&nbsp; $100.00&nbsp;</td><td>&nbsp;</td>
+<td bgcolor="#FF9900">&nbsp;A2-1</td><td>&nbsp;C4:  =A2</td><td>&nbsp;=(A20)</td></tr>
+</tbody></table>
+<blockquote>
+<pre>Sub FormatOfAssignment()
+    Dim rng As Range, cell As Range
+    Set rng = Selection
+    For Each cell In Intersect(rng, _
+            rng.SpecialCells(xlFormulas))
+        On Error GoTo passby
+        Range(Mid(cell.Formula, 2)).Copy
+        cell.PasteSpecial Paste:=xlFormats, Operation:=xlNone, _
+           SkipBlanks:=False, Transpose:=False
+passby:
+        On Error GoTo 0
+    Next cell
+End Sub
+</pre>
+</blockquote>
+
+<h2 id="popvalue">Populating cell value based on Cell Interior Color (#popvalue)</h2>
+<blockquote>
+<pre>Sub Populate_color()
+   Dim cell As Range
+   For Each cell In Intersect(Selection, _
+            Selection.SpecialCells(xlCellTypeConstants, xlNumbers))
+      cell.Interior.ColorIndex = cell.Value
+   Next cell
+End Sub
+</pre>
+</blockquote>
+<h2 id="popbased">Setting Interior Color based on another Cell (#popbased)</h2>
+<blockquote>
+<pre>Option Explicit
+Global gblColorIndex As Long
+Sub SetInteriorColor()
+  gblColorIndex = ActiveCell.Interior.ColorIndex
+End Sub 
+
+Sub PutInteriorColor()
+  Selection.Interior.ColorIndex = gblColorIndex
+End Sub
+
+Sub SameInteriorAsA1()
+  Selection.Interior.ColorIndex = [A1].Interior.ColorIndex
+End Sub
+</pre>
+Also see  <a href="http://dmcritchie.mvps.org/excel/condfmt.htm">Conditional Formatting</a>.
+</blockquote>
+<h2 id="sorting">Sorting on Interior Cell Color (#sorting)</h2>
+<blockquote>
+This is a somewhat frequent request, that is going to be prone to errors
+in interpretation of what color is.&nbsp; You can obtain ColorIndex or
+RGB but how would you sort that meaningfully.&nbsp; Finally you are going
+to have problems with recalculaton.&nbsp;
+<p>This topic is covered further on a separate page:&nbsp;
+<a href="http://dmcritchie.mvps.org/excel/colorsort.htm">Color, Sorting on Color</a>
+
+</p></blockquote>
+
+<h2 id="count">Interior Color, using Count, SUM, etc. (#count)</h2>
+<blockquote>
+<pre>For Each cell In Selection  'Check for Black interior color
+    If cell.Interior.ColorIndex = 1 Then
+        [action]
+    End If
+Next
+</pre>
+<ul>
+<li><a href="http://groups.google.com/groups?oi=djq&amp;ic=1%20&amp;selm=an_464294863">Count cells with a particular background cell color</a> - PhilCxn &lt;philcxn@aol.com&gt;
+</li><li><a href="http://groups.google.com/groups?oi=djq&amp;ic=1%20&amp;selm=an_468960461">ShowColor(cellref)</a> - Patrick Molloy
+</li></ul>
+If the colors you want to test are due to <b><a href="http://dmcritchie.mvps.org/excel/condfmt.htm">Conditional Formatting</a></b> then use the
+same kind of test that you used for Conditional Formatting, and the results will be
+immediate (no recalculation needed)  i.e.
+<br>&nbsp; =COUNTIF(D12:D16,TRUE)
+<br>&nbsp; =SUMIF(D12:D16,TRUE,E12:E16)
+<p>If the colors are not from C.F.  you will have to use a User Defined Function to find
+this information and since formatting is not
+registered as a cell change you will have to wait for a recalculation
+to occur to get a valid answer.&nbsp;  You can but should not make the
+macro Volatile, since by doing that you could bring your Excel to an
+extremely slow state.&nbsp; Examples follow in the next paragraph.
+</p><p><font color="blue">See my Functions for <a href="#icolorF">Determining Interior Color of Another Cell</a> described earlier for RGB, ColorIndex, and HEX.</font>
+</p><p id="cpcolorsx"><b>Chip Pearson</b> has some additional <b>color functions</b> using a little different approach unfortunately for whatever reason he does not provide (#cpcolorsx)
+<a href="http://groups.google.com/groups?as_umsgid=%3Cu9bmuBfX%24GA.269@cpmsnbbsa02%3E">examples</a>
+of his <a href="http://www.cpearson.com/excel/colors.htm">Functions For Cell Colors</a>:
+
+</p><blockquote>
+<font size="-1"><i>The following examples obtain the colorindex from another cell
+which is best, because colorindex colors can be changed by
+changing the palette.</i></font> 
+<p>
+Interior, colorindex of
+<br>&nbsp; &nbsp; =cellcolorindex(A$3,0)
+<br>if you installed in your personal.xls workbook to be available to all workbooks, use
+<br>&nbsp; &nbsp; =<b>personal.xls!</b>cellcolorindex(A$3,0)
+</p><p>
+Font, colorindex of
+<br>&nbsp; &nbsp; =cellcolorindex(A$3,1)
+</p><p>
+Count the cells with same interior color as A$3
+<br>&nbsp; &nbsp; =countbycolor(A$1:A$17,cellcolorindex(A$3,0))
+</p><p>
+Count the cells with same font color as A$3
+<br>&nbsp; &nbsp; =countbycolor(A$1:A$16,cellcolorindex(A$3,1),1)
+</p><p>
+Sum of the cells with same interior color as A$3
+<br>&nbsp; &nbsp; =sumbycolor(A$1:A$16,cellcolorindex(A$3))
+</p><p><font size="-1"><i>#NAME? error will occur if you misspell one of
+ the UDF (User Defined Function)
+above or did not install the function.&nbsp; A #VALUE! error may occur 
+if you
+did not install a function used inside or misuse it.&nbsp; Instructions 
+to install macros and User Defined Functions can be found on my <a href="http://dmcritchie.mvps.org/excel/formula.htm#install">formula.htm</a> page.
+</i></font>
+</p><p>To work with shading instead of colorindex
+use <b>.pattern</b> instead of <b>.colorindex</b>
+and rename functions accordingly.&nbsp; Specific
+patterns include such name as:  xlgray8,  xlgrid,  xlvertical
+</p></blockquote>
+<a href="http://xldynamic.com/source/xld.ColourCounter.html">Processing Coloured Cells</a>, Bob Phillips, informative text, and macro subroutines
+</blockquote>
+<h2 id="rowcolor">Determining the Row color based on cell value in that row (#rowcolor)</h2>
+<blockquote>
+<a href="http://dmcritchie.mvps.org/excel/sumdata.htm#condfmt">Conditional Formatting</a> introduced in Excel 97 is limited to 3 conditions.&nbsp;
+With more than 3 conditions a macro would be required, such as shown below.&nbsp;  Another
+kind of macro that you could use is an <a href="http://dmcritchie.mvps.org/excel/event.htm">Event Macro</a>.&nbsp; Note
+even if you have an Event macro you will probably want a normal macro to fix things up
+ahead of time.&nbsp; A more complicated 
+<a href="http://groups.google.com/groups?threadm=uxiv5VokCHA.2256%40tkmsftngp12">macro</a> differentiating text values, numbers, and empty cells
+in addition to ranges of numbers. 
+ 
+
+<pre>Sub  ColorRowBasedOnCellValue()
+  'David McRitchie, 2001-01-17 programming -- Color row based on value
+  Application.ScreenUpdating = False
+  Application.Calculation = xlCalculationManual
+  Dim cell As Range
+  For Each cell In Intersect(Selection, ActiveCell.EntireColumn, _
+         ActiveSheet.UsedRange)
+    Select Case cell.Value
+        Case Is &gt;= 50
+            cell.EntireRow.Interior.colorindex = 20
+        Case Is &gt;= 40
+            cell.EntireRow.Interior.colorindex = 37
+        Case Is &gt;= 20
+            cell.EntireRow.Interior.colorindex = 38
+        Case Is &gt;= 0
+            cell.EntireRow.Interior.colorindex = 36
+        Case Else
+            cell.EntireRow.Interior.colorindex = 44
+    End Select
+  Next cell
+  Application.Calculation = xlCalculationAutomatic
+  Application.ScreenUpdating = False
+End Sub
+</pre>
+</blockquote>
+<h2 id="DelRows">Delete Rows Based on RED interior color in Column A (#DelRows)</h2>
+<blockquote>
+The following will delete the entire row if it sees RED
+as define by ColorIndex = 3  &nbsp; &nbsp;There are some caveats:
+<ul compact="compact">
+<li><b><a href="http://dmcritchie.mvps.org/excel/condfmt.htm">Conditional Formatting</a></b> colors are invisible to VBA.
+</li><li>The ColorIndex = 3 &nbsp; is the default someone could change it
+</li><li>Not everybody is going to be able to distinguish RED from
+   colors close to it and then there is Red/Green colorblindness.
+</li><li>Not all monitors are going to show colors alike, though RED
+   is pretty safe in that regard.
+<p>
+Comments for the following code can be found below the
+macro <a href="http://dmcritchie.mvps.org/excel/delempty.htm">DelCellsUp</a> on another web page.
+</p><pre>Sub DeleteRowsRedInColA()
+  'David McRitchie  2002-01-17
+  '  http://www.mvps.org/dmcritchie/excel/colors.htm
+  'Will not find color due to Conditional Formatting
+  Application.ScreenUpdating = False
+  Application.Calculation = xlCalculationManual   'pre XL97 xlManual
+  Dim rng As Range, ix As Long
+  Set rng = Intersect(Range("A:A"), ActiveSheet.UsedRange)
+  For ix = rng.Count To 1 Step -1
+      If rng.Item(ix).Interior.ColorIndex = 3 Then
+        rng.Item(ix).EntireRow.Delete
+      End If
+  Next
+  Application.Calculation = xlCalculationAutomatic
+  Application.ScreenUpdating = True
+End Sub
+</pre>
+</li></ul>
+</blockquote>
+
+<h2 id="hexconv">HEX Conversions for RGB values (#hexconv)</h2>
+<blockquote>
+Hex characters are actually characters, but represent binary
+numbers.
+<p>
+RGB values are represented by 6 hex digits.&nbsp; The
+first pair of digits represents Red, the next Green, and the last 
+Blue.&nbsp;
+The values range from 0 to 255, or in hex from 00 to FF.&nbsp;
+Given a six hex digit representation in hex characters such
+as 00C0C8 as hex characters simply use left, and mid to separate them 
+the digit pairs.&nbsp; Look in HELP for more information about HEX2DEC  
+and DEC2HEX.&nbsp;
+Suppose B14 had a Long (Binary) integer in it and you want 6 hex digits 
+for RGB.&nbsp;
+HEX2DEC and DEC2HEX are part of the Statistical Analysis Toolpak <a href="http://support.microsoft.com/?id=157768">[menu]</a> &nbsp;<a href="http://support.microsoft.com/?id=165134">[list]</a>
+</p><p>There are 256³ RGB colors (16,777,216) and only 56 colorindex colors in the
+palette; so a one to one match of each is not only impossible, but the colors in
+the palette can be reassigned to different colors.&nbsp;
+</p><p>
+<b id="hexconvxl">Conversion of Font color in Excel to a hex string for HTML  (via VBA code)&nbsp;</b> (#hexconvxl)</p><p>
+The following code was used in <a href="http://dmcritchie.mvps.org/excel/code/xl2htmlx.txt">XL2HTMLx</a> conversion of
+an Excel sheet to HTML.&nbsp; Note Excel appears to store <a href="http://groups.google.com/groups?oi=djq&amp;ic=1%20&amp;selm=an_516376369">binary</a> values in reverse
+order or perhaps this is just &#8220;big-endian&#8221; (main frames, 1234 order) vs. &#8220;<a href="http://groups.google.com/groups?oi=djq&amp;ic=1%20&amp;selm=an_627845809">little-endian</a>&#8221; (most PCs, 4321 order).
+</p><pre>   xColor = Right("000000" &amp; Hex(Selection.Cells(r, C).FONT.Color), 6)
+   xColor = "#" &amp; Right(xColor, 2) &amp; Mid(xColor, 3, 2) &amp; Left(xColor, 2)
+   If xColor &lt;&gt; "#000000" Then _
+      x = "&lt;font color=""" &amp; xColor &amp; """&gt;" &amp; x &amp; "&lt;/font&gt;"
+</pre>
+<b>Conversion of a single binary decimal number to decimal RGB components (WS formulas)</b>
+<pre>      =RIGHT("000000" &amp; DEC2HEX(B14),6)
+</pre>
+If you have a character value such as 00C0C8
+or you start from a Long (Binary) integer, your can incorporate the above formula into the following
+<pre>      =HEX2DEC(Left(B15,2))
+      =HEX2DEC(MID(B15,3,2))
+      =HEX2DEC(MID(B15,5,2))
+</pre>
+<p>I  have  not provided for the possibility of 3-digit hex numbers in HTML like  #333  #608 
+which are equivalent to #333333 and  #660088, simply because I would never create the values
+that way  myself.
+</p><p>I also would never produce  RGB(red,green,blue)  strings for use in HTML and they are mostly
+done incorrectly (without quotes) in most places that I see them used and harder to work with
+visually when coding or comparing source.
+</p></blockquote>
+<h2 id="chgpalette">Changing the Colors of your Excel Color Palette (#chgpalette)</h2>
+<blockquote>
+To change a color in your palette go to  Tools --&gt; Options --&gt; 
+Color
+where you can change a color by double-clicking on a color cell.&nbsp; 
+Use Reset to revert back to defaults.&nbsp; Also see &nbsp;  Help --&gt;
+ colors, changing
+<h3 id="fillcolor">Changing the default Shading Color (Fill Color) / (#fillcolor)</h3>
+The default shading color is yellow (RGB: 255, 255, 0).&nbsp; If you want
+to change it for a workbook you will have to change the color in that position
+of the palette.&nbsp; Best to exchange the color with another color on
+the palette say Lt Green (RGB: 204, 255, 204) using Tools, Options, Colors,
+Modify, Custom.&nbsp;  You can always use Reset to restore normal palette
+for the workbook.&nbsp;
+</blockquote>
+<h2 id="cellcommentcolor">Changing the Color of your Excel Cell Comment 
+<img src="Excel_Colors_fichiers/ccomment.gif" alt="" width="87" height="19"> &nbsp;(#cellcommentcolor)</h2>
+<blockquote>
+A frequent question in the newsgroups is how to change the default colors in the
+Cell Comments.&nbsp; The name of the author is picked up from your
+Tools, Options, General, User Name.&nbsp; (you cannot change the color of the
+red triangle)<p>
+Cell Comments are Tool Tips so to change your default you must change your
+Windows default.&nbsp; To change only once cell comment double-click on the border of the
+cell comment and make your changes.&nbsp; </p><p>
+To change Tool Tips.&nbsp;  (Changes to Windows settings <b>affect ALL applications</b>)    
+<br>&nbsp; Windows START, settings, control panel, Display (monitor icon)
+</p><p id="BackupDisplay"><b>Retain a copy of your Original Control Display Settings</b> (#BackupDisplay)
+<br>Before continuing it might be a good idea to name your current settings
+and then name your new settings.
+</p><ul>
+<li>Press [Save As] button then assign the scheme to something
+like Windows out of the box mmm dd, yyyyy  (current date).
+</li><li>Press [Save As] button then assign your own name to the scheme
+i.e. &#8220;David  2000-06-22&#8221;,  and all future changes would be made
+to this scheme.
+</li><li>In the item: pull down, rather than pulling down you can simply place cursor in the box and then
+use the cursor to cycle up or down through the choices.&nbsp; Select &#8220;Tool Tip&#8221;
+and make changes to font, fontsize, text color, background color as wanted.&nbsp;
+not sure if you actually will change the fontname or not.
+</li></ul>
+You can select parts of the windows shown which will change the item selected,
+but tool tips is not one of them, you have to use the pull down.
+<p>My own settings show: red text, yellow background, 8 point, MS Sans Serif,
+non bold, non italic.&nbsp; (I'm not sure what they were originally).
+</p><p>Also see <b><a href="http://dmcritchie.mvps.org/excel/ccomment.htm#cboxblack">entire comment box turns
+black</a></b>.
+</p><p>More material on <a href="http://dmcritchie.mvps.org/excel/ccomment.htm"><b>Cell Comments</b></a>&nbsp; 
+<img src="Excel_Colors_fichiers/ccomment.gif" alt="" width="87" height="19">
+</p></blockquote>
+
+<h2 id="tabs">Changing the Colors of Worksheet Tabs (#tabs)</h2>
+<blockquote>
+The color of the tabs is controlled by Windows,
+you can change the scrollbar setting but it will affect everything in Windows and until Excel 2002 all tabs 
+had to be the same color as the scrollbar.&nbsp;
+Changes to size of scrollbar will change size of tabs.&nbsp; Changes to color affect both tabs and
+all scrollbars in Windows (or at least in Office).&nbsp; You can change the fontsize on the sheet tab,
+but not the font color or font size within  the sheet tabs.&nbsp;
+Before making changes see <a href="#backupDisplay">Retain a copy of your Original Control Display Settings</a>
+on this page. 
+
+<p>In Excel 2002 you can <b>color individual worksheet tabs</b>.&nbsp;
+Here is a tip from Jessica Kovalik in <a href="http://www.microsoft.com/office/previous/xp/tips/Excel.asp">
+exceltip</a> at Microsoft &#8217;s Office site.
+</p><ul><li>Select the sheets you want to color by holding down the CTRL key and clicking the tabs.
+</li><li>On the Format menu, point to Sheet, and then click Tab Color. You can also right-click the sheet tab and then click Tab Color.
+</li><li>Click the color you want, and click OK.
+</li></ul>
+In VBA (for Excel 2002) the equivalent would be:
+<br> &nbsp; &nbsp; Activesheet.Tab.ColorIndex = 50
+<p>
+I believe the normal reason to color tabs is to provide an
+<b>organization</b> to them.&nbsp; You can sort sheet tabs with a macro.&nbsp;
+You can enhance your sorted arrangement by preceding the
+sheet tab with some less conspicuous small letters <b>prefixes</b>.&nbsp; i.e.
+<br> &nbsp; &nbsp; k.FunctKeys,  k.ShortCutKeys
+<br>If working with dates for sheetnames, spell the year out and place it first
+<br> &nbsp; &nbsp; 2002-10,  2002-11, 2002-12, 2003-01 
+<br><b>sort sheet tabs</b> into alphabetical order in
+    <a href="http://www.mvps.org/dmcritchie/excel/buildtoc.htm#sortallsheets">http://www.mvps.org/dmcritchie/excel/buildtoc.htm#sortallsheets</a> 
+<br style="text-indent:10px">
+The main topic on that page is to create a <b>Table of Contents</b>
+with hyperlinks to the other sheets.&nbsp;  <b>Shorter versions</b>
+with just membernames can be found in <a href="http://dmcritchie.mvps.org/excel/buildtoc2.htm">buildtoc.htm</a>.&nbsp; A builtin alternative to navigate to 
+a sheet via the <b>More Sheets</b> dialog listing (also available from a <a href="http://dmcritchie.mvps.org/sheets.htm#moresheets"><i>macro</i></a>)
+ is to
+right-click on a scrolling arrow in lower left corner, the sheets are 
+listed in the same order as the worksheet tabs at the bottom of your 
+spreadsheet
+(another reason to sort your worksheets).
+<br style="padding-left:10px">
+<b>Sort sheets by color of sheet tab</b>, by <a href="#colorindex">colorindex</a> number, Chip Pearson's <a href="http://www.cpearson.com/excel/sortws.htm">sortws.htm</a> 
+
+</p><p>There is one problem that I know of with the arrangement of sheet tabs.&nbsp;
+You will probably have trouble with <a href="http://dmcritchie.mvps.org/excel/mailmerg.htm">Mail Merge</a> if the
+worksheet to be used in Mail Merge is not the first worksheet.
+</p><p>You can go through 90 worksheets very quickly using <b>Ctrl+PageDn</b> to
+go down through the worksheet tabs, or <b>Ctrl+PageUp</b> to backup through the tabs.&nbsp;
+I prefer to use a couple of macros and <a href="http://dmcritchie.mvps.org/excel/toolbars.htm#xl2kTBM">toolbar buttons</a> 
+&#8211; &nbsp;
+<img src="Excel_Colors_fichiers/cirminus.jpg" title="Previous Sheet -- Ctrl+PageUP" alt="Previous Sheet -- Ctrl+PageUP" width="16" height="16">&nbsp;
+<img src="Excel_Colors_fichiers/cirplus.jpg" title="Next Sheet -- Ctrl+PageDN" alt="Next Sheet -- Ctrl+PageDN" width="16" height="16">&nbsp;
+</p></blockquote>
+
+<h2 id="triangles">Color Triangles in Excel &nbsp; (#triangles)</h2>
+<blockquote>
+<ul>
+<li>Red , upper-right corner of a cell indicates a <a href="http://dmcritchie.mvps.org/excel/ccomment.htm"><b>Cell Comment</b></a>&nbsp; 
+<img src="Excel_Colors_fichiers/ccomment.gif" alt="" width="87" height="19">
+</li><li>Black, upper-left corner of a cell indicates highlight changes:&nbsp;   Tools,  Track changes, 
+<img src="Excel_Colors_fichiers/highlite.jpg" alt="Highlight" width="16" height="16">
+<a href="http://dmcritchie.mvps.org/excel/highlite.htm">Highlight Changes</a>
+</li><li>Green,  upper-left corner of a cell indicates a potential error
+ in the formula in the cell.&nbsp; To turn off or adjust settings:&nbsp;
+select Tools, Options, and select the Error Checking (tab) and uncheck 
+"Clear the Enable Background Error Checking".&nbsp; 
+[<a href="http://office.microsoft.com/assistance/offhelp/offxp/excel/xlmain10/html/TrianglesInCells.htm">new 
+in Excel 2002</a> (dead link at MS]and you can change the color of error
+ indicator triangle there as well.&nbsp; Not shown if Track Changes is 
+also in effect.
+</li><li>Purple, lower-right corner of a cell indicates a smart tag.
+[<a href="http://office.microsoft.com/assistance/preview.aspx?AssetID=HA010347451033&amp;CTT=6&amp;Origin=EC010553071033">new in Excel 2002 (XP)</a>] to turn off or adjust settings:&nbsp;
+select Tools, Options, and select the Error Checking tab. 
+[<a href="http://www.jegsworks.com/Lessons/numbers/intro/smarttags.htm" title="Jan's Excel Intro: Smart Tags">more</a>]
+</li></ul>
+Printing the comment indicator by aligning a shape over the upper right corner of cells with comments.&nbsp; see <a href="http://www.contextures.com/xlcomments03.html#Indicator">
+Print Worksheet with Comment Indicators</a> (contextures.com) 
+</blockquote>
+<h2 id="manual">Manually Changing the Interior Color of Worksheet Cells (#manual)</h2>
+<blockquote>
+Setting the interior color of the active cell, specifically
+Applies to all cells in a selection that you can add to with the use
+of the Ctrl key.<br>
+&nbsp; &nbsp; Format  --&gt; cells --&gt; patterns and colors
+<p>
+You can install a button on your toolbar to hasten the process,
+it looks like a dripping paint can.<br>
+&nbsp; &nbsp; View --&gt; customize --&gt; toolbars --&gt; custom --&gt; format<br>
+   select the dripping paint bucked, marked  Fill Color
+    and drag it to your toolbar (if not already there).
+</p></blockquote>
+
+<h2 id="colorcoding">Color Coding Cells for Usage (#colorcoding)</h2>
+<blockquote>
+You can color code cells or text to help with reading and/or to help
+with data entry.&nbsp; Please keep in mind that <a href="#gamma">laptops</a> and <a href="#colorblind">color-blind</a> people may not see colors the same as you do.<br>
+<ul>
+<li>Pale color shading can be used to designate input areas, and can be 
+expanded to different colors for input from different areas 
+(departments).
+</li><li>Formula results might be shown with
+a different text color, and the formulas themselves and other non-input 
+areas such as descriptions might be protected from accidental changes.
+</li><li>Cells with links will generally show up in blue or purple with underlining.&nbsp; Best not to change what people expect.
+</li><li>Highlight cells for review that you modified or find questionable.&nbsp; Change them back at a later time.&nbsp; 
+Also see tracking in <a href="http://dmcritchie.mvps.org/excel/highlite.htm">Highlight changes</a>. 
+</li></ul>
+Related: Conditional Formatting,  Format/Styles, Filtering,  Tracking  
+</blockquote>
+
+<h2 id="colorcharts">Color Charts on the Web &nbsp; (#colorcharts)</h2>
+<blockquote>
+Refer to
+<a href="http://homepage.mac.com/jakesan/DHP/page0/page2/page2.html">
+RGB Hex Triplet Color Chart</a> for Douglas R. Jacobson &#8217;s charts.
+[<a href="http://www.hypersolutions.org/rgb.html">
+http://homepage.mac.com/jakesan/DHP/page0/page2/page2.html</a>]
+<p><a href="http://www.bitmedia.com/colors/">
+<font color="red"><b>Hex Color Chart</b></font> for the HTML Resource Guide
+</a> for a faster loading variation of Jacobson &#8217;s hex chart by Jack Wilson.
+[<span style="color: #33CC33; background-color: #FFF8FF;">http://www.bitmedia.com/colors/</span>]&nbsp; 
+<!-- formerly: http://www.mta.ca/comment/wwwcon/hexchart.html -->
+It &#8217;s faster
+because it uses tables with BGCOLOR instead of a lot of bit maps.
+[<a href="http://web.archive.org/web/20020308045955/http://www.mta.ca/comment/wwwcon/hexchart.html">
+archived copy</a>]
+</p><p><a href="http://xl.barasch.com/colorthing.htm">Color Chart</a> 
+at Alan Barasch &#8217;s Excel site has a slider to change the background color so you 
+can check combinations of cell colors in foreground to varied background colors in 
+HTML.&nbsp; Pretty neat.&nbsp; He also has a similar 
+<b><a href="http://xl.barasch.com/colorfonts.htm"><font color="red">Font Color Chart</font></a></b> (text background), and <a href="http://xl.barasch.com/ColorThing.htm">Color Chart</a> (page background)
+a slider to change cell background color.&nbsp; (Charts and sliders each have 216 colors) <i>Works only in Internet Explorer, but is one of the easiest to use.</i>
+
+</p><p><a href="http://the-light.com/colclick.html">6X6X6 Netscape Color Palette Map</a>
+</p><p><a href="http://en.wikipedia.org/wiki/Web_colors">Web colors - Wikipedia, the free encyclopedia</a>, From Wikipedia, the free encyclopedia
+
+</p></blockquote>
+<h2 id="detector">Color Detector <img src="Excel_Colors_fichiers/colordetector.bmp" alt="D" width="32"> (#detector) 
+<img src="Excel_Colors_fichiers/ff_colorzilla.jpg" title="colorzilla eyedropper color sampler" alt="eyedropper" width="32" height="20"></h2>
+<blockquote>
+<p><a href="http://www.cosmin.com/colordetector/">cosmin.com - Color Detector</a>,
+Freeware program to detect the color of any pixel on the screen. Simply 
+run the program, point the mouse cursor anywhere on the screen, and the 
+color detector window will display the RGB values, 
+HTML hex code, and the color name of the color of the pixel pointed to 
+by the mouse cursor.&nbsp; You can invoke the installed .exe link 
+directly with IE, or 
+if using Firefox by invoking through your
+<a href="http://dmcritchie.mvps.org/firefox/firefox.htm#launchy_notes">customized</a> Launchy extension to
+invoke with Explorer.&nbsp; (<a title="can be invoked here if installed" href="file:///C:/Program%20Files/ColorDetector100/colordetector.exe"> colordector.exe</a>)
+</p><p><i>If you are using Firefox for browsing HTML you might want to also install
+<a href="http://dmcritchie.mvps.org/firefox/firefox.htm#colorzilla">Colorzilla</a> extension for working within Firefox &#8211;
+<img src="Excel_Colors_fichiers/ff_colorzilla.jpg" alt="" title="colorzilla eyedropper" style="padding-left: 5px; padding-right: 5px;" width="23" align="right" height="15">
+ Eyedropper (color sampler, status bar options), 
+ColorPicker, Page Zoomer, DOM inspector (if present).&nbsp;
+More extensions on my <a href="http://dmcritchie.mvps.org/firefox/firefox.htm#colorzilla">Firefox Customization (Notes)</a> page.</i>
+</p><p><a href="http://www.lagmonster.org/utilities/colorpicker.html">Color Wheel Picker</a>, is similar
+to Color Detector but works only on its page with a color wheel so you can pick your color (<i>IE active-x only</i>)
+</p><p><a href="http://www.markup.co.nz/colorPicker/back_to_font.htm">Back To Font Web Color Picker</a>,
+select your colors and create the styles to place into your HTML coding. &nbsp; Also see
+<a href="http://dmcritchie.mvps.org/excel/font.htm#css">CSS (Style Sheets)</a> on other references on my <a href="http://dmcritchie.mvps.org/excel/font.htm">Font</a> page.
+</p><p><img src="Excel_Colors_fichiers/html_colors_picker.jpg" width="24" align="right"><a href="http://www.ampsoft.net/utilities/HTMLColors.php">HTML Colors - Color picker</a>, AMPsoft,  displays the hex, dec and RGB values, via taskbar icon or hotkey&nbsp; (is not a detector)
+</p><p><a href="https://addons.mozilla.org/firefox/2290">Palette Grabber :: Firefox Add-ons</a>, Creates a color palette for Photoshop, Paint Shop Pro, GIMP, Flash, Fireworks, Paint.NET, or OS X based on the current page.
+</p></blockquote>
+
+<h2 id="Luma">Color Luminance &nbsp; (#Luma)</h2>
+<blockquote>
+In color television luminance is calculated (approximately) like this (1 =
+white, represented by 1V signal voltage):
+<br> &nbsp; L = R*0.3+G*0.59+B*0.11
+<p>
+This formula was created to make the color video signal compatible with
+black and white monitors/receivers.&nbsp; Monochrome monitors are still in use as
+professional viewfinders on many TV cameras, since they create a sharper
+image than one made from a color matrix.  <a href="http://groups.google.com/groups?threadm=enOHod3hAHA.2044%40tkmsftngp04">Posted</a> by Harald Staff,
+plus the reference below.
+</p><p><a href="http://www.inforamp.net/%7Epoynton/notes/colour_and_gamma/ColorFAQ.html">Poynton &#8217;s Color FAQ</a>, Charles Poynton &nbsp; [<a href="http://www.engineering.uiowa.edu/%7Eaip/Misc/ColorFAQ.html#RTFToC9">alt</a>] 
+<a href="http://web.archive.org/web/20020202012226/http://www.inforamp.net/%7Epoynton/notes/colour_and_gamma/ColorFAQ.html">[archive]</a> -- see item #9.
+</p></blockquote>
+<h2 id="pgms">Colors used in other programs (not Excel) / (#pgms)</h2>
+<blockquote>
+<ul>
+<li><a href="http://web.archive.org/web/20071027142004/http://www.geocities.com/SoHo/3505/help/colorcube.html">Color Cube</a> (geocities archive),  see <a href="http://javascript.internet.com/image-effects/basic-color-cube.html">The JavaScript Source: Image Effects: Basic Color Cube</a>.&nbsp;
+Show what different background colors (in HTML) would look like from a choice of 216 (18x12) colors.
+</li><li><a href="http://www.jagular.com/colors.shtml">Syd Allan: HTML Tag an Color Test Page</a>, has a list of other sites with color information, and has color tables
+of colors used in <b>SAS</b>.&nbsp;
+</li></ul>
+</blockquote>
+<h2 id="coloringcode">Coloring Code (#coloringcode)</h2>
+<ul>
+<li><a href="http://www.prettycode.com/page.asp?p=pcp_index#download">Pretty Print</a> printing
+VBA Code in colors as you see them on your screen.&nbsp; 
+</li><li>HTML Kit also has color provisions and is set up for HTML.&nbsp; HTML-Kit described in 
+<a href="http://dmcritchie.mvps.org/excel/xl2html.htm#related">Related</a> area of my Excel to HTML page. 
+</li></ul>
+<h2 id="vbe">Colors used in the Visual Basic Editor (#vbe)</h2>
+<blockquote>
+Not going to go into this in detail here or on the page for the  
+<a href="http://dmcritchie.mvps.org/excel/vbewindow.htm">Visual Basic Editor (VBE) Window</a>
+but you can change the colors in the code window (Alt+F11, F7) for 
+background, font and indicator for each of these texts:  Normal, 
+Selection, Syntax Error, Execution Point, Break Point, Comment, Keyword,
+ Identifier, Bookmark, and Call Return.&nbsp; [VBE Tools menu, Options, 
+Editor Format (tab) ] 
+</blockquote>
+
+
+<h1 id="browsers"><small class="hdinfo">Browsers &#9783;<span style="color:red;">&#9783;</span>&#9783;&#9783; &nbsp;</small></h1>
+<hr id="browsers" color="Green">
+<center><font color="#008000"><b>
+Browsers &nbsp; Browsers &nbsp; Browsers &nbsp; Browsers &nbsp; Browsers &nbsp; Browsers &nbsp;
+Browsers &nbsp; Browsers &nbsp; (#browsers) &nbsp;
+</b></font></center>
+<hr color="green">
+
+See information under <a href="#colordetector">Color Detector</a> and other references to Firefox, Internet Explorer, and HTML on this page.
+<p>
+There are bookmarklets (JavaScript code) that are stored as bookmarks 
+that can be run in all browsers, but specific bookmarklets may be 
+limited to one browser due to limitations in a browser.&nbsp; There are 
+several webpages with bookmarklets that involve color at squarefree.com,
+ specifically
+<a href="https://www.squarefree.com/bookmarklets/color.html">Color Bookmarklets</a> and <a href="https://www.squarefree.com/bookmarklets/zap.html">Bookmarklets for Zapping Annoyances</a>.
+
+</p><h1 id="related"><small class="hdinfo">Related &#9783;&#9783;<span style="color:red;">&#9783;</span>&#9783; &nbsp;</small></h1>
+<hr id="related" color="Green">
+<center><font color="#008000"><b>
+Related &nbsp; Related &nbsp; Related &nbsp; Related &nbsp; Related &nbsp; Related &nbsp;
+Related &nbsp; Related &nbsp; Related &nbsp;  Related &nbsp; (#related) &nbsp;
+</b></font></center>
+<hr color="green">
+
+<h2 id="thissite">Pages on this site using Color (#thissite)</h2>
+<ul>
+<li><a href="http://dmcritchie.mvps.org/excel/colorsort.htm">Color, Sorting on Color</a>
+</li><li><a href="http://dmcritchie.mvps.org/excel/colorrng.htm">Coloring within Ranges, Examples</a>
+</li><li><a href="http://dmcritchie.mvps.org/excel/condfmt.htm">Conditional Formatting</a>,
+<br>&nbsp;<a href="http://dmcritchie.mvps.org/excel/condfmt.htm#identify">Finding Conditional Formatting Formulas afterwards (--identify--)</a>; CondFormula macro also on <a href="http://dmcritchie.mvps.org/excel/formula.htm#condformula">Formula</a> page. 
+</li><li><a href="http://dmcritchie.mvps.org/excel/event.htm">Event macros</a>, example for change event using <a href="http://dmcritchie.mvps.org/excel/event.htm#case">Case</a> statement makes use of colorindex and refers back to this page.
+</li><li><a href="http://dmcritchie.mvps.org/excel/xl2html.htm">Excel to HTML conversions</a>, macros XL2HTML, XL2HTMLx and other,
+along with references to other HTML materials, and conversions.
+</li><li><a href="http://dmcritchie.mvps.org/excel/font.htm">Font</a>
+</li><li>Formula page, <a href="http://dmcritchie.mvps.org/excel/formula.htm#custom">Custom Formatting</a> (custom number formatting), and
+also seen above on <a href="#custom">this page</a>.
+</li></ul>
+<h2 id="postings">Newsgroup Postings on Colors (#postings)</h2>
+<ul>
+<li><a href="http://groups.google.com/groups?threadm=ujrm%23v2pCHA.1980@TK2MSFTNGP12">
+Coloring Capital Letters within a cell</a>, posting by Mike Currie, 2002-12-19, in
+<a href="http://dmcritchie.mvps.org/excel/xlnews.htm">excel.misc</a>,
+colors capitals Red [3], non-capitals as black [lowercase and digits with 1] and
+error cells with Teal [14] using a Change Event macro, I included a comparable
+ColorCapsCatchUp macro for use on existing cells prior to installing the Change Event macro.&nbsp;
+You can search Google Groups for the string  <b>Characters(Start:=</b>  for additional
+examples of formatting or coloring parts of text strings. 
+</li><li><a href="http://groups.google.com/groups?threadm=eqajYB04DHA.1672@TK2MSFTNGP12.phx.gbl">Coloring for Day of Week</a> in a Macro,  Bob Phillips, 2004-01-25.
+</li><li><a href="http://groups.google.com/groups?oi=djq&amp;ic=1%20&amp;selm=an_621663049">RGB Colors</a> posted
+collection of links by Tom Ogilvy (2000-05-10).&nbsp; -- and it doesn't even
+have the varied names of colors recognized by some of the browsers.
+
+</li><li><a href="http://groups.google.com/groups?threadm=%238dvIUY3FHA.2676%40TK2MSFTNGP15.phx.gbl">
+Showing the Color dialog, showing the user assigned colors</a>
+</li></ul>
+<h2 id="otherxl">Other Pages on Colors in Excel (#otherxl)</h2>
+<ul>
+<li>
+Chip Pearson &#8217;s "<a href="http://www.cpearson.com/excel/colors.htm">Functions For Cell Colors</a>".&nbsp; Nice functions but no examples there, see my <a href="#cpcolorsx">examples above</a>.
+</li><li><a href="http://peltiertech.com/Excel/Charts/ConditionalChart1.html">Conditional Chart Examples</a>,
+ Jon Peltier, how to change the formatting of a chart &#8217;s plotted points 
+(markers, bar fill color, etc.) based on the values of the points
+</li><li><a href="http://www.rdpslides.com/pptfaq/FAQ00249.htm">Excel code to modify Excel chart palette colors -- The PowerPoint FAQ</a>, Brian Reilly.&nbsp; The supplied code are mostly variations of black to
+point out that excel is not applying the actual RGB but the ColorIndex. (archive 2001-12-22, <a href="http://groups.google.com/group/microsoft.public.excel.charting/browse_frm/thread/ccbe688d01fab942/c6d35e2efe25347d?lnk=st&amp;q=Create_Excel_Palette_By_RGB+brian&amp;rnum=4&amp;hl=en#c6d35e2efe25347d">posted</a>).
+</li><li><a href="http://www.edferrero.com/charting.aspx">Colour Palette Tool</a>,
+Ed Ferrero, to modify the colour palette, and save it as a small file that can be distributed (newusers, <a href="http://groups.google.com/groups?threadm=%23Y9X4zHNGHA.3732%40TK2MSFTNGP10.phx.gbl">206-02-15</a>).
+
+
+</li></ul>
+<h2 id="colorblind">Colorblind  (#colorblind)</h2>
+<ul>
+<li><a href="http://webexhibits.org/causesofcolor/2.html">How do things look to colorblind people?</a>
+</li><li><a href="http://www.personal.psu.edu/faculty/c/a/cab38/ColorBrewerBeta.html">
+ColorBrewer</a>,
+  by Cindy Brewer some color schemes for color separations as on maps
+  (qualitative), as on population densities (sequential),&nbsp; as 
+emphasis on
+  low and high values as in ages (diverging). Shows whether good for
+  color-blind, photocopy, LCD projector, CRT-friendly, printer
+  friendly.&nbsp;&nbsp; For what I tried, the choices are so distinct 
+that I did't see any
+  problems on my laptop (32 bit color) even though marked as not good 
+for laptops.&nbsp; [color choices, also see Jenks below] --- Maybe I 
+can't find what I thought was there
+</li><li><a href="http://www.vischeck.com/vischeck/vischeckURL.php">Vischeck: VischeckURL</a>,
+color blindness check of your designated web page (URL) as seen by someone with
+ Deuteranope (a form of red/green color deficit),  
+ Protanope (another form of red/green color deficit), 
+ Tritanope (a blue/yellow deficit- very rare).&nbsp; Look further into site and
+ the numbers are adjustable for further testing.&nbsp; The displays on this site use
+ technology licensed by Stanford University.
+</li><li><a href="http://colorschemedesigner.com/">Color Scheme Designer 3</a>, Simulate color vision deficiency.
+</li></ul>
+
+
+<h2 id="other">Other Pages Making Use of Color (#other)</h2>
+<blockquote>
+<ul>
+<li><a href="http://groups.google.com/groups?threadm=3ED54331.AA2C03A7@msn.com">Changing Font color for certain words within a cell</a>, Dave Peterson,
+  macro, 2003-05-28 [also see <a href="http://dmcritchie.mvps.org/excel/font.htm#related">Font</a> page]
+</li><li><a href="http://dmcritchie.mvps.org/excel/colorsort.htm">Color, Sorting on Color</a>, not recommended, at
+least not in any Excel through Excel 2000,  but
+the topic does come up.&nbsp;
+</li><li><a href="http://www.j-walk.com/ss/excel/tips/tip49.htm">A Color Picker Dialog Box</a>,
+John Walkenbach, Tip49.&nbsp; An alternative to not being able to determine the
+current selected color in the color palette dialog boxes (xlDialogColorPalette).&nbsp;
+
+</li><li><a href="http://dmcritchie.mvps.org/excel/colorrng.htm">Coloring within Ranges, Examples</a>
+</li><li><a href="http://www.degraeve.com/color-palette/index.php">Color Palette Generator</a>,
+ degraeve, Enter the URL of an image to get a color palette (10 colors) 
+that matches the image.&nbsp;  Useful in creating a website color 
+palette that matches a key image to be used for a website. [referened by
+ <a href="http://antifavicon.com/">Favicon Generator</a>]
+</li><li><a href="http://www.d.umn.edu/is/support/Training/Online/webdesign/tools.html">Color Tools</a>, links provided at Univ. Of Minnesota
+</li><li><b><a href="http://dmcritchie.mvps.org/excel/condfmt.htm">Conditional Formatting</a></b> was introduced with Excel 97 and is a terrific
+feature, but there is a limit of 3 conditional sets per cell grouping (like 3 wishes).&nbsp;
+Conditional Formatting, while in effect for a cell, will override the text colors
+that can be produced for numeric
+values by <a href="http://dmcritchie.mvps.org/excel/formula.htm">normal cell formatting</a>.&nbsp;
+</li><li><a href="http://gimp-savvy.com/BOOK/index.html?node54.html">Conversion to Grayscale</a>, a chapter
+in a book available online about color <a href="http://gimp-savvy.com/BOOK/index.html?node54.html">Grokking the GIMP</a> by Carey Bunks.
+</li><li><a href="http://web.archive.org/web/*/http://www.dartmouth.edu/%7Edbkarnes/jenks/jenks.html">Jenks Natural
+  Breaks,</a> part of the Virtual Geography Department Project described in
+  Cartography Working Group of the Department of Geography, Dartmouth College.
+</li><li><a href="http://dmcritchie.mvps.org/excel/logoshd.htm">Logos and Graphics into headers/footers</a>,
+ you can 
+assign the top rows of your spreadsheet for use as headers to include 
+logos, logos in color, and 
+to include fonts in color.&nbsp;  Fonts are available only in one color 
+in the actual headings and footings-- black.&nbsp; For footers you are 
+out of luck as far as alternatives to black. 
+</li><li><a href="http://www.uwec.edu/Help/Office07/colors-ep.htm">Office 2007: Using Color in Excel and PowerPoint, 2007</a>,
+ Excel and PowerPoint provide a number of common colors for quick access
+ from the FILL buttons on the Ribbon. If you prefer to use a different 
+color or a customized color from the dialog color box.
+</li><li><a href="http://home.ecn.ab.ca/%7Ejsavard/crypto/mi0606.htm">Security hardware encryption</a>, terms
+for similar information: cryptography, encryption, stenography, digital watermarks
+</li><li><a href="http://dmcritchie.mvps.org/excel/buildtoc.htm#HyperlinkStyle">Restore Hyperlink Style</a>, restore normal hyperlink colors and formatting
+</li><li><a href="http://www.cpearson.com/excel/rowliner.htm">Rowliner</a> 
+<font size="+1" color="#FF0000" face="wingdings">«</font>, Chip Pearson.&nbsp; RowLiner add-in allows you have Excel automatically draw row and/or
+column lines around the active cell, making it easier to view rows and
+columns, especially when gridlines are not visible.&nbsp; But you lose the ability
+to use undo (Ctrl+Z) with macros and with addins.
+</li><li>Setting Colors and Safe Colors in HTML, <a href="http://www.w3.org/MarkUp/Guide/Style#colors">Dave Raggett's Introduction to CSS</a> (Cascading Style Sheets)
+</li><li><a href="http://peltiertech.com/WordPress/2008/02/20/using-colors-in-excel-charts/">Using Colors in Excel Charts</a>, PTS Blog, Jon Peltier
+
+by Jon Peltier
+</li><li><a href="http://dmcritchie.mvps.org/excel/event.htm">Worksheet Change Events</a>, shows changing color of cells
+upon Change. 
+</li></ul>
+</blockquote>
+
+<h2 id="font">Other Things not necessary related to Colors (#font)</h2>
+<blockquote>
+<ul>
+<li><a href="http://dmcritchie.mvps.org/excel/font.htm">FONT</a>, test for <b>BOLD</b> with <a href="http://dmcritchie.mvps.org/excel/font.htm#isbold">ISBOLD(cell)</a> UDF.
+</li><li><a href="http://dmcritchie.mvps.org/excel/formula.htm#fontinfo">FONTINFO</a> macro on <a href="http://dmcritchie.mvps.org/excel/formula.htm">Formula</a> page.
+</li></ul>
+</blockquote>
+
+<h2 id="problems">Problems formatting color (#problems)</h2>
+<blockquote>
+<ul>
+<li>Can't see font on a black background:&nbsp; When formatting  Cell Comment  or Text Box
+ format the FONT  from the Font tab,  changing the
+ line color under the Color Tab will not affect the font. (<a href="http://groups.google.com/groups?threadm=uvnqnu1FEHA.1180@TK2MSFTNGP09.phx.gbl">2004-03-31, McRitchie, misc</a>)
+</li><li>Printer out of a color of ink.
+</li><li>File, Page Setup, Sheet, <b>Print B&amp;W</b> &#8212; will remove 
+interior color, and will print font, and borders in black.&nbsp; Print 
+Preview shows up same as Printed copy (in black and white).
+
+</li><li>Use of a <a href="http://dmcritchie.mvps.org/excel/template.htm">template</a> such as book.xlt and sheet.xlt  
+</li><li>Use of <b>Format</b>, <b>Style</b> can seem like a template was
+used to set up colors, but can't find any such format.&nbsp;
+Format, Style, should be   normal    and    no shading
+</li><li>Colors are only <b>missing on monitor</b>, due to <b><a href="http://support.microsoft.com/kb/833258" title="833258 formerly Q320531 -- 
+OFF: Changes to Fill Color and Fill Pattern Are Not Displayed">High Contrast</a> Accessibility option</b>.&nbsp; A variation of same problem:
+<a href="http://support.microsoft.com/?id=833258">The fill color, the fill pattern, or the line color of a WordArt or AutoShape object in an Office document does not change</a> 
+</li><li>Also see companion page &#8211; <a href="http://dmcritchie.mvps.org/excel/colors_print.htm">
+Colors as seen on Monitor, and in Preview and Print</a>, which attempts to <b>show what you might see</b>. 
+</li><li>You see a lot of gray (grey) on the sheet and you may see big page numbers.&nbsp; That would be <a href="http://dmcritchie.mvps.org/excel/pagebreaks.htm">page break Preview</a>, eliminate with 
+Eliminate with&nbsp; View, Normal
+</li><li>Excel 2003 apply the Service Pack, can't find anything on printing problems,
+but have been told it fixes some kind of problem. Always be sure to keep
+your software updated. <a href="http://support.microsoft.com/kb/894471/en-us">Description of the Excel 2003 post-Service Pack 1 hotfix package: February 20, 2005</a>.  Though there is a
+scaling problem with margins  print 1 pages wide by 1 pages tall.
+</li></ul>
+</blockquote>
+
+<h2 id="printers">Printers, Printing and colors -- How Printers work (#printers)</h2>
+<blockquote>
+<ul>
+<li><a href="http://itresources.brainbuzz.com/tutorials/tutorial.asp?t=S1TU1163">
+How Printers Work [The PC Technology Guide]</a>, referenced in a
+<a href="http://www.lockergnome.com/issues/techspecialist/20010808.html">LockerGnome newsletter 2001-08-08</a>]
+</li><li><a href="http://www.pctechguide.com/13inkjets.htm">InkJet printers</a> and other types,
+<a href="http://www.pctechguide.com/glossary/11printers.htm#CMYK">glossary of color printer terminology</a>
+</li><li><a href="http://dmcritchie.mvps.org/excel/colors_print.htm">See how</a> Printer settings of  &#8220;Print with Black Ink&#8221; and
+page setup -- Sheet -- Print B&amp;W Only.&nbsp; See how these
+settings affect what you see.
+</li></ul>
+</blockquote>
+
+<h2 id="mskb">Microsoft Knowledge DataBase  &nbsp; <small>(#mskb)</small></h2>
+<blockquote>
+<a href="http://support.microsoft.com/?id=97600">Q97600 Printed Colors Different than on Screen:&nbsp; Blue is Purple, etc.</a>&nbsp;
+ This is not a problem with your printer driver, with Microsoft Windows,
+ or with your printer.&nbsp; RGB colors (light) are additive.&nbsp; CMYK
+ colors (pigments) are subtractive.&nbsp;
+<a href="http://search.zdnet.com/pcmag/issues/1507/pcmg0103.htm">
+Color-Matching Blues</a> <i>[PC Magazine Apr 9, 1996]</i>.
+
+<p>
+Q149170 -
+Sample Visual Basic Code to Create Color Index Table<br><a href="http://support.microsoft.com/?id=149170">http://support.microsoft.com/?id=149170</a>
+</p><p>
+<a href="http://support.microsoft.com/?id=170781">Q170781 XL: RGB Function May Map to Incorrect Color</a><br>
+The color property accepts an RGB triple and maps it to the nearest 
+color index.&nbsp; When the property retrieves the color value, it 
+returns the RGB color of the index, which may be different from the 
+value you typed. In the example, RGB(65,0,0) is mapped to Dark Red 
+(RGB(128,0,0)), but RGB(64,0,0) is mapped to Black (RGB(0,0,0)).<br>
+<br>
+Q157202 - XL97: Color Palette Looks Different in MS Excel 97
+<br>&nbsp;<a href="http://support.microsoft.com/?id=157202">http://support.microsoft.com/?id=157202<br>
+</a>Q211533 - XL2000: Color Palette Looks Different in Microsoft Excel 2000
+<br>&nbsp;<a href="http://support.microsoft.com/?id=211533">http://support.microsoft.com/?id=211533</a>
+<br>Q291293 - XL2002: Color Palette Looks Different in Microsoft Excel 2002
+<br>&nbsp;<a href="http://support.microsoft.com/?id=291293">http://support.microsoft.com/?id=291293</a>
+
+</p>
+<p><a href="http://support.microsoft.com/?id=288412">288412
+XL2002: How to Change the Color Palette for Workbooks</a>
+</p><p><a href="http://support.microsoft.com/?id=163230">
+Q163230 - Thick Borders May Not Be Printed in Low Printer Resolution 
+ (163230)</a> -- When you print thick borders in Microsoft Excel, the 
+borders may be partially printed, or the borders may not be printed at 
+all. 
+
+</p><p><a href="http://support.microsoft.com/?id=320531">Q320531 -- 
+OFF: Changes to Fill Color and Fill Pattern Are Not Displayed</a>,&nbsp;<br>
+ Incorrect/missing colors may occur with use of High Contrast under 
+Display tab of Accessibility Options.&nbsp; Colors don't show on monitor
+ however, you may be able to see the changes 
+in print preview and on a printed page.&nbsp; Also see <a href="#problems">Problems</a> topic. 
+
+</p></blockquote>
+<table align="center" bgcolor="#FFFFFF" border="1" cellpadding="0" cellspacing="0">
+<tbody><tr><td><b>&nbsp;MS KB</b></td><td><b>&nbsp;Term</b></td>
+<td><b>&nbsp;Article title</b> &nbsp; -- &nbsp;  <font color="red">http://support.microsoft.com/kb/ &nbsp; &nbsp; 
+[<a href="http://support.microsoft.com/default.aspx?scid=%2Fservicedesks%2Fhotfixes%2FOff_KB_Public_Modified.asp">ref</a>]</font></td>
+<td><b>&nbsp;Product</b></td></tr>
+<tr><td>&nbsp;Q211661</td><td>&nbsp;XL2000:</td>
+<td>&nbsp;Black and White Printer Prints Colored Lines As Grayscale</td>
+<td>&nbsp;Excel 2000</td></tr>
+<tr><td>&nbsp;Q248175</td><td>&nbsp;XL2000:</td>
+<td>&nbsp;Border Color of Lines Returns Incorrect RGB Value When Border Color Is Set to Automatic</td>
+<td>&nbsp;VBA</td></tr>
+<tr><td>&nbsp;Q176839</td><td>&nbsp;XL:</td>
+<td>&nbsp;Buttons on Toolbar Created in Earlier Version May Lose Color</td>
+<td>&nbsp;Excel</td></tr>
+<tr><td>&nbsp;Q211650</td><td>&nbsp;XL2000:</td>
+<td>&nbsp;Cannot Change Fill Color for Walls or Floor on 3-D Chart</td>
+<td>&nbsp;Excel 2000</td></tr>
+<tr><td>&nbsp;Q214312</td><td>&nbsp;XL2000:</td>
+<td>&nbsp;Cannot Change Series Colors on a Surface Chart</td><td>&nbsp;Excel 2000</td></tr>
+<tr><td>&nbsp;Q95478</td><td>&nbsp;XL:</td><td>&nbsp;Can't Print Color Headers and Footers</td>
+<td>&nbsp;Excel</td></tr>
+<tr><td>&nbsp;Q212746</td><td>&nbsp;XL:</td>
+<td>&nbsp;Cell Fill Color Bleeds into Adjacent Cells When Viewed in Web Browser</td>
+<td>&nbsp;Excel</td></tr>
+<tr><td>&nbsp;Q82015</td><td>&nbsp;XL:</td>
+<td>&nbsp;Changing Series Colors on a Surface Chart</td><td>&nbsp;Excel</td></tr>
+<tr><td>&nbsp;Q211533</td><td>&nbsp;XL2000:</td>
+<td>&nbsp;Color Palette Looks Different in Microsoft Excel 2000</td><td>&nbsp;VBA</td></tr>
+<tr><td>&nbsp;Q229006</td><td>&nbsp;XL:</td>
+<td>&nbsp;Colors in HTML File Don't Appear as Expected When Opening Page in Excel</td>
+<td>&nbsp;Excel</td></tr>
+<tr><td>&nbsp;Q134261</td><td>&nbsp;XL:</td>
+<td>&nbsp;Data Map Colors Lost When File Exported to Macintosh</td><td>&nbsp;Excel</td></tr>
+<tr><td>&nbsp;Q211828</td><td>&nbsp;XL2000:</td>
+<td>&nbsp;Fill Colors May Be Saved Incorrectly with WK3 File</td><td>&nbsp;Excel 2000</td></tr>
+<tr><td>&nbsp;Q214097</td><td>&nbsp;XL2000:</td>
+<td>&nbsp;Header or Footer Is Not Printed in Color</td><td>&nbsp;Excel 2000</td></tr>
+<tr><td>&nbsp;Q202355</td><td>&nbsp;XL2000:</td>
+<td>&nbsp;Hyperlink Colors Don't Show Expected Color Format</td><td>&nbsp;Excel 2000</td></tr>
+<tr><td>&nbsp;Q213191</td><td>&nbsp;XL2000:</td>
+<td>&nbsp;Modules Cannot Be Printed in Color</td><td>&nbsp;Excel 2000</td></tr>
+<tr><td>&nbsp;Q173083</td><td>&nbsp;XL:</td><td>&nbsp;Modules Cannot Be Printed in Color</td>
+<td>&nbsp;VBA</td></tr>
+<tr><td>&nbsp;Q213201</td><td>&nbsp;XL2000:</td>
+<td>&nbsp;RGB Function May Map to Unexpected Color</td><td>&nbsp;VBA</td></tr>
+<tr><td>&nbsp;Q213801</td><td>&nbsp;XL:</td>
+<td>&nbsp;Sample Visual Basic Code to Create Color Index Table</td><td>&nbsp;Excel</td></tr>
+<tr><td>&nbsp;Q214353</td><td>&nbsp;XL2000:</td>
+<td>&nbsp;Toolbar Buttons Created in Earlier Version May Lose Color</td>
+<td>&nbsp;Excel 2000</td></tr>
+<tr><td>&nbsp;Q211728</td><td>&nbsp;XL2000:</td>
+<td>&nbsp;Trendline Equation Label Does Not Use the Specified Color</td>
+<td>&nbsp;Excel 2000</td></tr>
+<tr><td>&nbsp;Q211677</td><td>&nbsp;XL2000:</td>
+<td>&nbsp;Unexpected Font or Color Formatting Applied to Chart</td>
+<td>&nbsp;Excel 2000</td></tr>
+<tr><td>&nbsp;Q213688</td><td>&nbsp;XL2000:</td>
+<td>&nbsp;Using ColorIndex Property to Set Color of Borders Results in Unexpected Behavior</td>
+<td>&nbsp;VBA</td></tr> 
+</tbody></table>
+<h2 id="msdn">Microsoft MSDN &nbsp; (#msdn)</h2>
+<blockquote>
+<p><a href="http://msdn.microsoft.com/library/en-us/owcvba10/html/ocproColorIndex.asp?frame=true">ColorIndex Property</a>, article within Office Web Components in MSDN (shows the color palette).
+</p></blockquote>
+<hr>
+This page has <span class="cyan">many links</span>, you may want to distinguish the links by clicking on the 
+following  
+<a href="http://dmcritchie.mvps.org/ie/bookmarklets.htm"><b>bookmarklets</b></a>:&nbsp; 
+<br>&nbsp; <b><a href="javascript:for(nIx5Bs=0;nIx5Bs<document.all.length;nIx5Bs++){if(document.all[nIx5Bs].tagName=='A'){with(document.all[nIx5Bs].style){if(backgroundColor=='yellow'){void(backgroundColor=document.bgColor)}else{void(backgroundColor='yellow')}}}}" title="This is a bookmarklet drag it to your links toolbar">highlight links</a></b> 
+(for IE, or use the Mozilla version of 
+<a href="javascript:if(frames.length>1)alert('This%20\%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20bookmarklet%20does%20not%20work%20with%20frames.');else{var%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20lnks=(document.all)?document.all.tags('A'):document.getElementsByTagName('A');for(nIx5Bs=0;nIx5Bs<lnks.length;nIx5Bs++){with(lnks[nIx5Bs].style){if(backgroundColor=='yellow'){void(backgroundColor='');void(color='')}else{void(backgroundColor='yellow');void(color='black')}}}}">
+highlight links</a>) providing a <span class="yellow">yellow background</span> to all links, then  use 
+<br>&nbsp; <a href="javascript:(function(){var%20i,x;%20for%20(i=0;x=document.links[i];++i)x.style.color=[%22blue%22,%22red%22,%22orange%22][sim(x,location)];%20function%20sim(a,b)%20{%20if%20(a.hostname!=b.hostname)%20return%200;%20if%20(fixPath(a.pathname)!=fixPath(b.pathname)%20||%20a.search!=b.search)%20return%201;%20return%202;%20}%20function%20fixPath(p){%20p%20=%20(p.charAt(0)==%22/%22%20?%20%22%22%20:%20%22/%22)%20+%20p;/*many%20browsers*/%20p=p.split(%22?%22)[0];/*opera*/%20return%20p;%20}%20})()" title="This is a bookmarklet drag it to your links toolbar"><b>int/ext links</b></a> to distinguish internal links in <font color="red">Red</font> font and
+External links in <font color="blue">Blue</font> font, Use F5 to RESET this page back to normal.&nbsp;
+<hr>
+
+This page was introduced on July 12, 1998.&nbsp;
+<!-- based on http://www.javascriptmall.com/learn/lesson11.htm -->
+ <script language="JavaScript" type="text/javascript"><!--
+ document.write("(last update: " + document.lastModified + ")")
+ //--></script>(last update: 04/06/2011 03:59:25)
+<br>&nbsp;
+<center>
+<a href="http://dmcritchie.mvps.org/excel/excel.htm">[My Excel Pages -- home]</a>&nbsp; &nbsp;
+<a href="http://dmcritchie.mvps.org/excel/xlindex.htm">[INDEX to my site and the off-site pages I reference]</a>&nbsp;
+<br>
+<a href="http://dmcritchie.mvps.org/excel/search.htm">[Site Search -- Excel]</a>&nbsp;&nbsp; &nbsp;
+<a href="#" onclick="history.back();">[Go Back]</a>&nbsp; &nbsp;
+[Return to <a href="#top">TOP</a>]&nbsp;
+</center>
+
+
+<p><small>Please send your comments concerning this web page to: David McRitchie
+<!-- noindex -->
+<i><a href="mailto:David%20McRitchie%3C%44%4D%63%52%69%74%63%68%69%65%40%76%65%72%69%7A%6F%6E%2E%6E%65%74%3E?subject=Comments%20on%20colors.htm%20&amp;body=comments%20concerning%20a%20--My%20Excel%20Pages--%20webpage%0D%0A%20at%20http://www.mvps.org/dmcritchie/excel/colors.htm%0D%0A%0D%0AHi%20David,%0D%0A">
+send email comments</a></i>
+<!-- end noindex --></small>
+</p><hr><p>
+<a href="http://dmcritchie.mvps.org/excel/copyr.htm">Copyright © 1997 - 2011
+</a>,&nbsp; F.&nbsp;David McRitchie,&nbsp; All Rights Reserved
+
+
+</p></body></html>

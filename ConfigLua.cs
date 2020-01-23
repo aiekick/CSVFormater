@@ -1,11 +1,27 @@
 /*
- * Crée par SharpDevelop.
- * Utilisateur: cuicui
- * Date: 17/06/2010
- * Heure: 21:40
- * 
- * Pour changer ce modèle utiliser Outils | Options | Codage | Editer les en-têtes standards.
- */
+MIT License
+
+Copyright (c) 2020 Aiekick
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
 using System;
 using LuaInterface;
 using System.Windows.Forms;
@@ -55,7 +71,7 @@ namespace CSVFormater
         // on va verifer le code lua
         public ConfigLua(ManualResetEvent eventStop, ManualResetEvent eventStopped, MainForm form)
         {
-            luaInterpret = new Lua(); // ce charge d'interpreter le fichier lua selctionné
+            luaInterpret = new Lua(); // ce charge d'interpreter le fichier lua selctionnÃ©
             xlsFormater = new XLSFormater(); // ce charge de manipuler excel
 
             m_EventStop = eventStop;
@@ -106,13 +122,13 @@ namespace CSVFormater
             //////////////////////////////////////////////////////////////////
             if (CurrentConfigBoxName.Length == 0)
             {
-                MessageBox.Show("Aucune Config n'est sélèctionnée");
+                MessageBox.Show("Aucune Config n'est sÃ©lÃ¨ctionnÃ©e");
                 return -1;
             }
 
             if (CSVFilePathArr.Length == 0)
             {
-                MessageBox.Show("Aucun fichier CSV n'est défini");
+                MessageBox.Show("Aucun fichier CSV n'est dÃ©fini");
                 return -1;
             }
 
@@ -144,13 +160,13 @@ namespace CSVFormater
             //////////////////////////////////////////////////////////////////
             if (CurrentConfigBoxName.Length == 0)
             {
-                MessageBox.Show("Aucune Config n'est sélèctionnée");
+                MessageBox.Show("Aucune Config n'est sÃ©lÃ¨ctionnÃ©e");
                 return -1;
             }
 
             if (CSVFilePath.Length == 0)
             {
-                MessageBox.Show("Aucun fichier CSV n'est défini");
+                MessageBox.Show("Aucun fichier CSV n'est dÃ©fini");
                 return -1;
             }
 
@@ -174,7 +190,7 @@ namespace CSVFormater
             // CLEAR CONSOLE BOX
             // on efface la consolebox dans la mainform dnas la fonction private void button2_Click(object sender, EventArgs e)
 
-            int result = InitLuaFunctions(); // on init les fontions qui vont etre utilisées dans lua
+            int result = InitLuaFunctions(); // on init les fontions qui vont etre utilisÃ©es dans lua
 
             string appPath = Path.GetDirectoryName(Application.ExecutablePath);
 
@@ -281,7 +297,7 @@ namespace CSVFormater
 	                
 	                if (ErrorProcessus == true)
 	                {
-	                    MessageBox.Show(ErrorProcessString, "Processus stoppé");
+	                    MessageBox.Show(ErrorProcessString, "Processus stoppÃ©");
 	                    break;
 	                }
 	
@@ -354,7 +370,7 @@ namespace CSVFormater
 	                
 	                if (ErrorProcessus == true)
 	                {
-	                    MessageBox.Show(ErrorProcessString, "Processus stoppé");
+	                    MessageBox.Show(ErrorProcessString, "Processus stoppÃ©");
 	                    break;
 	                }
 	
@@ -419,7 +435,7 @@ namespace CSVFormater
         }
         
         
-        // On enregistre les fonctions excel a utilisé dans LUA
+        // On enregistre les fonctions excel a utilisÃ© dans LUA
         private int InitLuaFunctions()
         {
         	// Info => MainFrom
